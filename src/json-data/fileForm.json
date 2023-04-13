@@ -280,7 +280,7 @@
             "id": "categoryId",
             "name": "categoryId",
             "label": "Enter category",
-            "classes": "col-md-6  form-control",
+            "classes": "",
             "placeholder": "Enter your categoryId",
             "suggestion": "",
             "config": {
