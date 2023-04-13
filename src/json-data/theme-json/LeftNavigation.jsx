@@ -4,6 +4,7 @@ import { Role } from "../../component/Role";
 import { RoleList } from "../../component/RoleList";
 import { UserList } from "../../component/UserList";
 import { File } from "../../component/File";
+import { FileList } from "../../component/FileList";
 
 const section = [
   {
@@ -62,7 +63,7 @@ const section = [
             icon: "",
             name: "File List",
             path: "/file_list",
-            subComponent: Test
+            subComponent: FileList
           },
           {
             icon: "",

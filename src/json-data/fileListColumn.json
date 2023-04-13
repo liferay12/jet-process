@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Nature",
+        "selector": "nature",
+        "sortable": true
+    },
+    {
+        "name": "File No.",
+        "selector": "fileno",
+        "sortable": true
+    },
+    {
+        "name": "Category",
+        "selector": "category",
+        "sortable": true
+    },
+    {
+        "name": "Subject",
+        "selector": "subject",
+        "sortable": true
+    },
+    {
+        "name": "Created On",
+        "selector": "createdOn",
+        "sortable": true
+    },
+    {
+        "name": "Actions",
+        "cell": [
+            {
+                "name": "edit",
+                "lebel":"",
+                "icon": "fa fa-pencil",
+                "class": ""
+            },
+            {
+                "name": "delete",
+                "lebel":"Delete",
+                "icon": "fa fa-trash",
+                "class": ""
+            },
+            {
+                "name": "sent",
+                "lebel":"Update",
+                "icon": "fa fa-cloud-upload",
+                "class": ""
+            }
+        ]
+        
+    }
+]

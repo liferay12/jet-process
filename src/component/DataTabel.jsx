@@ -133,7 +133,7 @@ export const DataTabel = (props) => {
     return (
         <>
             <DataTable
-                title="User List"
+                title=""
                 columns={column}
                 data={props.data}
                 pagination
@@ -145,7 +145,7 @@ export const DataTabel = (props) => {
                 actions={(
                     <>
                         <button onClick={onDownload} className="btn btn-sm btn-info">Export</button>
-                        <button onClick={handleClick} className="btn btn-sm btn-primary">+ Add User</button>
+                        {/* <button onClick={handleClick} className="btn btn-sm btn-primary">+ Add User</button> */}
 
                     </>
                 )}
