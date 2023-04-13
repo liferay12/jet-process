@@ -1,7 +1,7 @@
-import { ChatBox } from "../theme/component/ChatBox";
-import { Login } from "../theme/component/Login";
-import { SignIn } from "../theme/component/SignIn";
-import { SignUp } from "../theme/component/SignUp";
+import { ChatBox } from "../../theme/component/ChatBox";
+//import { Login } from "../../theme/component/Login";
+//import { SignIn } from "../../theme/component/SignIn";
+//import { SignUp } from "../../theme/component/SignUp";
 
 const TopbarConfig = [
   {

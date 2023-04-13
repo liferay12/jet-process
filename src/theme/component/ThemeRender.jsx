@@ -6,22 +6,22 @@ import { Topbar } from "./TopBar";
 import "font-awesome/css/font-awesome.min.css";
 import BreadCrumb from "./BreadCrumb";
 import { Content } from "./Content";
-import TopbarConfig from "../../json-data/TopbarConfig";
-import $ from "jquery"
+//import TopbarConfig from "../../json-data/theme-json/TopbarConfig";
+//import $ from "jquery"
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { UrlProtect } from "../Service/RequestProcessor";
-import { Login } from "./Login";
-import { SignUp } from "./SignUp";
-const ThemeRender = (props) => {
+import { BrowserRouter as Router} from "react-router-dom";
+//import { UrlProtect } from "../Service/RequestProcessor";
+//import { Login } from "./Login";
+//import { SignUp } from "./SignUp";
+const ThemeRender = (props) => {//
 
   // console.log("---------------- : " + useLocation())
 
   const [themeMode, setThemeMode] = useState("light");
-  const [login, setLogin] = useState(false);
+  //const [login, setLogin] = useState(false);
 
-  const [f, setF] = useState("Dashboard");
-  const [s, setS] = useState("dashboard");
+  //const [f, setF] = useState("Dashboard");
+  //const [s, setS] = useState("dashboard");
   var handleConverterTheme = function (mode) {
 
     if (mode === "light") {
