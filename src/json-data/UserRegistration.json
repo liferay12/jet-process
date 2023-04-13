@@ -1,0 +1,191 @@
+{
+    "id": "",
+    "title": "User Registration",
+    "subTitle": "",
+    "fields": [
+        {
+            "type": "hidden",
+            "id": "userId",
+            "name": "userId",
+            "label": "user id",
+            "classes": "col-md-6 form-control",
+            "placeholder": "Enter your user id",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": false,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "firstName",
+            "name": "firstName",
+            "label": "First Name",
+            "classes": "col-md-6 form-control",
+            "placeholder": "Enter your first name",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "lastName",
+            "name": "lastName",
+            "label": "Last Name",
+            "classes": "col-md-6 form-control",
+            "placeholder": "Enter your last name",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": "url",
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "screenName",
+            "name": "screenName",
+            "label": "user Name",
+            "classes": "col-md-6 form-control",
+            "placeholder": "Enter your user name",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": "url",
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "email",
+            "id": "email",
+            "name": "emailAddress",
+            "label": "Enter Email",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter your email address",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": "url",
+            "value": "",
+            "htmlElement": "email",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": "This field is required",
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "password",
+            "id": "password",
+            "name": "password_",
+            "label": "Enter Password",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter your password",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": "url",
+            "value": "",
+            "htmlElement": "password",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        }
+    ]
+}

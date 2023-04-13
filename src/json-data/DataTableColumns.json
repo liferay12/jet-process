@@ -1,0 +1,51 @@
+[
+    {
+        "name": "User Id",
+        "selector": "userId",
+        "sortable": true
+    },
+    {
+        "name": "Full Name",
+        "selector": "firstName",
+        "sortable": true
+    },
+    {
+        "name": "Screen Name",
+        "selector": "screenName",
+        "sortable": true
+    },
+    {
+        "name": "Email Address",
+        "selector": "emailAddress",
+        "sortable": true
+    },
+    {
+        "name": "Company Id",
+        "selector": "companyId",
+        "sortable": true
+    },
+    {
+        "name": "Actions",
+        "cell": [
+            {
+                "name": "edit",
+                "lebel":"",
+                "icon": "fa fa-pencil",
+                "class": "btn btn-sm btn-primary"
+            },
+            {
+                "name": "delete",
+                "lebel":"Delete",
+                "icon": "fa fa-trash",
+                "class": "btn btn-sm btn-danger"
+            },
+            {
+                "name": "update",
+                "lebel":"Update",
+                "icon": "fa fa-cloud-upload",
+                "class": ""
+            }
+        ]
+        
+    }
+]

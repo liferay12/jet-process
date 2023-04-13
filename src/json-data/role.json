@@ -1,0 +1,135 @@
+{
+    "id": "role",
+    "title": "Add Role",
+    "subTitle": "",
+    "fields": [
+        {
+            "type": "text",
+            "id": "userName",
+            "name": "userName",
+            "label": "User Name",
+            "classes": "form-control",
+            "placeholder": "Enter your full name",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+                
+            },
+            "options": [],
+            "value": "",
+            "htmlElement": "text",
+            "errorMessage": "Please Correct it",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": "",
+                "autocomplete":"on",
+                "autofocus":true
+            }
+        },
+        {
+            "type": "email",
+            "id": "name",
+            "name": "name",
+            "label": "Name",
+            "classes": "form-control",
+            "placeholder": "Enter your user name",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "options": [],
+            "value": "",
+            "htmlElement": "text",
+            "errorMessage": "",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "name": "title",
+            "label": "Enter title",
+            "classes": " form-control",
+            "placeholder": "Enter your title address",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "options": [],
+            "value": "",
+            "htmlElement": "title",
+            "errorMessage": "",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "type",
+            "name": "type",
+            "label": "Type",
+            "classes": " form-control",
+            "placeholder": "Enter your Type ",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "options": [],
+            "value": "",
+            "htmlElement": "type",
+            "errorMessage": "",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "subType",
+            "name": "subType",
+            "label": "subType",
+            "classes": " form-control",
+            "placeholder": "Enter your subType ",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "options": [],
+            "value": "",
+            "htmlElement": "subType",
+            "errorMessage": "",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "id": "signUp",
+    "title": "Sign Up",
+    "subTitle": "",
+    "fields": [
+        {
+            "type": "text",
+            "id": "fullName",
+            "name": "FullName",
+            "label": "Full Name",
+            "classes": "form-control",
+            "placeholder": "Enter your full name",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "options": [],
+            "value": "",
+            "htmlElement": "text",
+            "errorMessage": "",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "userName",
+            "name": "userName",
+            "label": "user Name",
+            "classes": "form-control",
+            "placeholder": "Enter your user name",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "options": [],
+            "value": "",
+            "htmlElement": "text",
+            "errorMessage": "",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "email",
+            "id": "email",
+            "name": "email",
+            "label": "Enter Email",
+            "classes": " form-control",
+            "placeholder": "Enter your email address",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "options": [],
+            "value": "",
+            "htmlElement": "email",
+            "errorMessage": "",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "password",
+            "id": "password",
+            "name": "password",
+            "label": "Enter password",
+            "classes": " form-control",
+            "placeholder": "Enter your password ",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "options": [],
+            "value": "",
+            "htmlElement": "password",
+            "errorMessage": "",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        }
+       
+    ]
+}
