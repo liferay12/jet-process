@@ -15,6 +15,7 @@ import { Role } from "../../component/Role";
 import { RoleList } from "../../component/RoleList";
 import Validation from "../../component/validation";
 import { UserList } from "../../component/UserList";
+import { File } from "../../component/File";
 
 const section = [
   {
@@ -35,7 +36,7 @@ const section = [
         ),
         name: "Dashboad",
         path: "/",
-        component: Home,
+        component: File,
         subItem: [],
       },
       {

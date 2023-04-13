@@ -1,0 +1,483 @@
+{
+    "id": "",
+    "title": "Create File",
+    "subTitle": "",
+    "fields": [
+        {
+            "type": "text",
+            "id": "nature",
+            "name": "nature",
+            "label": "Nature",
+            "classes": "col-md-6 form-control",
+            "placeholder": "Enter your nature",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": false,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "fileNo",
+            "name": "fileNo",
+            "label": "FileNo",
+            "classes": "col-md-6 form-control",
+            "placeholder": "Enter your fileNo",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "type",
+            "name": "type",
+            "label": "type",
+            "classes": "col-md-6 form-control",
+            "placeholder": "Enter your type",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "subject",
+            "name": "subject",
+            "label": "Subject",
+            "classes": "col-md-6 form-control",
+            "placeholder": "Enter your subject",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "remarks",
+            "name": "remarks",
+            "label": "Enter remarks",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter your remarks",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "email",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": "This field is required",
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "textarea",
+            "id": "reference",
+            "name": "reference",
+            "label": "Enter reference",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter your reference",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "reference",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "headId",
+            "name": "headId",
+            "label": "Enter headId",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter your headId",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "headId",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "fileCodeId",
+            "name": "fileCodeId",
+            "label": "Enter FileCodeId",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter your fileCodeId",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "fileCodeId",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "select",
+            "id": "categoryId",
+            "name": "categoryId",
+            "label": "Enter category",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter your categoryId",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "reference",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "year",
+            "name": "year",
+            "label": "Enter year",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter year",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "year",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "userPostId",
+            "name": "userPostId",
+            "label": "Enter userPostId",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter your userPostId",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "userPostId",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "currentUser",
+            "name": "currentUser",
+            "label": "Enter year",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter your currentUser",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "currentUser",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "currentState",
+            "name": "currentState",
+            "label": "Enter year",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter currentState",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "currentState",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "text",
+            "id": "dealingOrganizationId",
+            "name": "dealingOrganizationId",
+            "label": "Enter year",
+            "classes": "col-md-6  form-control",
+            "placeholder": "Enter dealingOrganizationId",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "id": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "value": "",
+            "htmlElement": "dealingOrganizationId",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        }
+    ]
+}

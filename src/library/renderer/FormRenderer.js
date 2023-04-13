@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import axios from "axios";
 const Form = (props) => {
     const { formObject } = props;
-    
+
     const [fieldArray, setFieldArray] = useState(formObject.fields);
     const [formData, setFormData] = useState([]);
     // const [fieldData, setFieldData] = useState(props.editData);
