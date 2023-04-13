@@ -1,19 +1,7 @@
-import { Finance } from "../../component/Finance";
 import { Test } from "../../component/Test";
-//import { Test1 } from "../../component/Test1";
-import { Task } from "../../component/Task";
-import { Login } from "../../theme/component/Login";
-//import { ChatBox } from "../../theme/component/ChatBox";
-import Countries from "../../theme/component/Countries";
-import { SignIn } from "../../theme/component/SignIn";
-import { SignUp } from "../../theme/component/SignUp";
-import Home from "../../component/Home";
-//import { UserList } from "../../component/DataTabel";
-import Employee  from '../../component/Employee';
 import UserRegistration from "../../component/UserRegistration";
 import { Role } from "../../component/Role";
 import { RoleList } from "../../component/RoleList";
-import Validation from "../../component/validation";
 import { UserList } from "../../component/UserList";
 import { File } from "../../component/File";
 
@@ -42,170 +30,6 @@ const section = [
       {
         icon: (
           <svg
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.986 14.0673C7.4407 14.0673 4.41309 14.6034 4.41309 16.7501C4.41309 18.8969 7.4215 19.4521 10.986 19.4521C14.5313 19.4521 17.5581 18.9152 17.5581 16.7693C17.5581 14.6234 14.5505 14.0673 10.986 14.0673Z"
-              stroke="#888888"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.986 11.0054C13.3126 11.0054 15.1983 9.11881 15.1983 6.79223C15.1983 4.46564 13.3126 2.57993 10.986 2.57993C8.65944 2.57993 6.77285 4.46564 6.77285 6.79223C6.76499 9.11096 8.63849 10.9975 10.9563 11.0054H10.986Z"
-              stroke="#888888"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        ),
-        name: "File",
-        path: "",
-        component: "",
-        subItem: [
-          {
-            icon: "",
-            name: "Create File",
-            path: "/employee-list",
-            subComponent: Employee,
-          },
-          {
-            icon: "",
-            name: "File List",
-            path: "/employee",
-            subComponent: Finance
-          },
-          {
-            icon: "",
-            name: "Inbox",
-            path: "/employee",
-            subComponent: Finance
-          },
-          {
-            icon: "",
-            name: "Sent List",
-            path: "/employee",
-            subComponent: Finance
-          }
-        ],
-      },{
-        icon: (
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.986 14.0673C7.4407 14.0673 4.41309 14.6034 4.41309 16.7501C4.41309 18.8969 7.4215 19.4521 10.986 19.4521C14.5313 19.4521 17.5581 18.9152 17.5581 16.7693C17.5581 14.6234 14.5505 14.0673 10.986 14.0673Z"
-              stroke="#888888"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.986 11.0054C13.3126 11.0054 15.1983 9.11881 15.1983 6.79223C15.1983 4.46564 13.3126 2.57993 10.986 2.57993C8.65944 2.57993 6.77285 4.46564 6.77285 6.79223C6.76499 9.11096 8.63849 10.9975 10.9563 11.0054H10.986Z"
-              stroke="#888888"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        ),
-        name: "Receipt",
-        path: "",
-        component: "",
-        subItem: [
-          {
-            icon: "",
-            name: "Create Receipt",
-            path: "/employee-list",
-            subComponent: Employee,
-          },
-          {
-            icon: "",
-            name: "Receipt List",
-            path: "/employee",
-            subComponent: Finance
-          },
-          {
-            icon: "",
-            name: "Inbox",
-            path: "/employee",
-            subComponent: Finance
-          },
-          {
-            icon: "",
-            name: "Sent List",
-            path: "/employee",
-            subComponent: Finance
-          }
-        ],
-      },
-      {
-        icon: (
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.986 14.0673C7.4407 14.0673 4.41309 14.6034 4.41309 16.7501C4.41309 18.8969 7.4215 19.4521 10.986 19.4521C14.5313 19.4521 17.5581 18.9152 17.5581 16.7693C17.5581 14.6234 14.5505 14.0673 10.986 14.0673Z"
-              stroke="#888888"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M10.986 11.0054C13.3126 11.0054 15.1983 9.11881 15.1983 6.79223C15.1983 4.46564 13.3126 2.57993 10.986 2.57993C8.65944 2.57993 6.77285 4.46564 6.77285 6.79223C6.76499 9.11096 8.63849 10.9975 10.9563 11.0054H10.986Z"
-              stroke="#888888"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        ),
-        name: "Core HR",
-        path: "/core-hr",
-        component: Test,
-        subItem: [],
-      },
-      {
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-controller"
-            viewBox="0 0 16 16"
-          >
-            <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z" />
-            <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729c.14.09.266.19.373.297.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.34 2.34 0 0 1 .433-.335.504.504 0 0 1-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z" />
-          </svg>
-        ),
-        name: "Finance",
-        path: "/Finance",
-        component: Finance,
-        subItem: [],
-      },
-      {
-        icon: (
-          <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
@@ -224,30 +48,36 @@ const section = [
             />
           </svg>
         ),
-        name: "tasks",
-        path: "/t",
+        name: "File",
+        path: "",
         component: "",
         subItem: [
           {
             icon: "",
-            name: "Countries",
-            path: "/countries",
-            subComponent: Countries,
+            name: "Create File",
+            path: "/file_create",
+            subComponent: File,
           },
           {
             icon: "",
-            name: "task summary",
-            path: "/tasksummary",
-            subComponent: Task
+            name: "File List",
+            path: "/file_list",
+            subComponent: Test
           },
+          {
+            icon: "",
+            name: "Inbox",
+            path: "/file_inbox",
+            subComponent: Test
+          },
+          {
+            icon: "",
+            name: "Sent List",
+            path: "/file_sentlist",
+            subComponent: Test
+          }
         ],
-      },
-    ],
-  },
-  {
-    title: "OUR FEACTURE",
-    option: [
-      {
+      },{
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -261,68 +91,41 @@ const section = [
             <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
           </svg>
         ),
-        name: "App",
+        name: "Receipt",
         path: "",
         component: "",
         subItem: [
           {
             icon: "",
-            name: "profile",
-            path: "/profile",
-            subComponent: SignIn
+            name: "Create Receipt",
+            path: "/receipt_create",
+            subComponent: File,
           },
           {
             icon: "",
-            name: "Edit-profile",
-            path: "/Edit-profile",
-            subComponent: SignUp,
+            name: "Receipt List",
+            path: "/receipt_list",
+            subComponent: Test
           },
           {
-            icon: "icon-Email",
-            name: "Email",
-            path: "/Email",
-            subComponent: Login
+            icon: "",
+            name: "Inbox",
+            path: "/receipt_inbox",
+            subComponent: Test
           },
+          {
+            icon: "",
+            name: "Sent List",
+            path: "/rceipt_sentlist",
+            subComponent: Test
+          }
         ],
       },
-      {
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-bar-chart"
-            viewBox="0 0 16 16"
-          >
-            <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z" />
-          </svg>
-        ),
-        name: "charts",
-        path: "",
-        component: "",
-        subItem: [
-          {
-            icon: "icon-float",
-            name: "float",
-            path: "/validation",
-            subComponent: Validation,
-          },
-          {
-            icon: "icon-morris",
-            name: "morris",
-            path: "/morris",
-            subComponent: Test,
-          },
-
-          {
-            icon: "icon-morris",
-            name: "morris",
-            path: "/morris",
-            subComponent: Test,
-          },
-        ],
-      },
+    ],
+  },
+  {
+    title: "OUR FEACTURE",
+    option: [
       {
         icon: (
           <svg
