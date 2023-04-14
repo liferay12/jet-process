@@ -8,12 +8,18 @@ import axios from "axios"
 
 const Select = (props) => {
     const [provider, setProvider] = useState([]);
-
+    const [defaultValue, setDefaultValue] = useState({ value: "", label: "" });
     useEffect(() => {
         console.log(" calling provider......")
         console.log("------> ")
-        if (props.fieldConfig.provider.url != "") {
+        console.log("====" + props.fieldConfig.options.data)
+        if (props.fieldConfig.provider.url !== "") {
+            setDefaultValue({ value: props.fieldConfig.provider.value, label: props.fieldConfig.provider.label })
             getProviderList(props.fieldConfig.provider.url);
+        } else {
+            console.log("====" + props.fieldConfig.options.data)
+            setDefaultValue({ value: props.fieldConfig.options.value, label: props.fieldConfig.options.label })
+            setProvider(props.fieldConfig.options.data)
         }
 
     }, [])
@@ -33,10 +39,9 @@ const Select = (props) => {
     return (
         <div className='form-group mt-3'>
             <label htmlFor={props.fieldConfig.id}>{props.fieldConfig.label}</label>
+            {console.log(defaultValue.label)}
             <ReactSelect
-
                 id={props.fieldConfig.id}
-
                 name={props.fieldConfig.name}
                 className={props.fieldConfig.classes}
                 placeholder={props.fieldConfig.placeholder}
@@ -48,6 +53,7 @@ const Select = (props) => {
                 autocomplete={props.fieldConfig.validation.autocomplete}
                 autofocus={props.fieldConfig.validation.autofocus}
                 options={provider}
+                defaultValue={props.fieldConfig.options.selectedValue || 'Select'}
             // multiple={props.fieldConfig.multiple}
             // suggestion={props.fieldConfig.suggestion}
             />

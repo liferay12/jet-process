@@ -2,13 +2,45 @@
     "id": "",
     "title": "Create File",
     "subTitle": "",
+    "urls": [
+        {
+            "type": "POST",
+            "id": "save",
+            "name": "save",
+            "label": "",
+            "value": "Save",
+            "url": "http://localhost:8081/api/v1/user"
+        },
+        {
+            "type": "GET",
+            "id": "get",
+            "name": "get",
+            "label": "",
+            "value": "Get",
+            "url": "http://localhost:8081/api/v1/user"
+        }
+    ],
+    "actions": [
+        {
+            "name": "update",
+            "type": "submit",
+            "label": "Update",
+            "applyto": ""
+        },
+        {
+            "name": "save",
+            "type": "submit",
+            "label": "Save",
+            "applyto": ""
+        }
+    ],
     "fields": [
         {
-            "type": "text",
+            "type": "select",
             "id": "nature",
             "name": "nature",
             "label": "Nature",
-            "classes": "col-md-6 form-control",
+            "classes": "",
             "placeholder": "Enter your nature",
             "suggestion": "",
             "config": {
@@ -18,10 +50,262 @@
                 "hidden": false
             },
             "provider": {
-                "id": "test",
+                "selectedValue": {
+                    "label": "",
+                    "value": ""
+                },
+                "label": "test",
+                "url": "",
+                "value": "",
+                "hidden": false
+            },
+            "options": {
+                "selectedValue": {
+                    "label": "Electronic",
+                    "value": "electronic"
+                },
+                "data": [
+                    {
+                        "value": "electronic",
+                        "label": "Electronic"
+                    },
+                    {
+                        "value": "physical",
+                        "label": "Physical"
+                    }
+                ]
+            },
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": false,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "select",
+            "id": "type",
+            "name": "type",
+            "label": "type",
+            "classes": "",
+            "placeholder": "Enter your type",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "selectedValue": {
+                    "label": "",
+                    "value": ""
+                },
+                "label": "test",
+                "url": "",
+                "value": "",
+                "hidden": false
+            },
+            "options": {
+                "selectedValue": {
+                    "label": "NON-SFS",
+                    "value": "NON-SFS"
+                },
+                "data": [
+                    {
+                        "value": "NON-SFS",
+                        "label": "NON-SFS"
+                    },
+                    {
+                        "value": "physical",
+                        "label": "Physical"
+                    }
+                ]
+            },
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "select",
+            "id": "basicHead",
+            "name": "basicHead",
+            "label": "Basic Head",
+            "classes": "",
+            "placeholder": "",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "selectedValue": {
+                    "label": "",
+                    "value": ""
+                },
+                "label": "test",
                 "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
                 "value": "",
                 "hidden": false
+            },
+            "options": {
+                "selectedValue": {
+                    "label": "",
+                    "value": ""
+                },
+                "data": []
+            },
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": false,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "select",
+            "id": "primaryHead",
+            "name": "primaryHead",
+            "label": "Primary Head",
+            "classes": "",
+            "placeholder": "",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "selectedValue": {
+                    "label": "",
+                    "value": ""
+                },
+                "label": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "options": {
+                "selectedValue": {
+                    "label": "",
+                    "value": ""
+                },
+                "data": []
+            },
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": false,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "select",
+            "id": "secondaryHead",
+            "name": "secondaryHead",
+            "label": "Secondary Head",
+            "classes": "",
+            "placeholder": "",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "selectedValue": {
+                    "label": "",
+                    "value": ""
+                },
+                "label": "test",
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "value": "",
+                "hidden": false
+            },
+            "options": {
+                "selectedValue": {
+                    "label": "",
+                    "value": ""
+                },
+                "data": []
+            },
+            "value": "",
+            "htmlElement": "text",
+            "valid": false,
+            "validation": {
+                "required": false,
+                "maxLength": "",
+                "minLength": ""
+            },
+            "errorMessage": {
+                "required": true,
+                "maxLength": "",
+                "minLength": ""
+            }
+        },
+        {
+            "type": "select",
+            "id": "tertiaryHead",
+            "name": "tertiaryHead",
+            "label": "Tertiary Head",
+            "classes": "",
+            "placeholder": "",
+            "suggestion": "",
+            "config": {
+                "disabled": false,
+                "readOnly": false,
+                "checked": false,
+                "hidden": false
+            },
+            "provider": {
+                "selectedValue": {
+                    "label": "",
+                    "value": ""
+                },
+                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "hidden": false
+            },
+            "options": {
+                "selectedValue": {
+                    "label": "",
+                    "value": ""
+                },
+                "data": []
             },
             "value": "",
             "htmlElement": "text",
@@ -39,15 +323,15 @@
         },
         {
             "type": "text",
-            "id": "fileNo",
-            "name": "fileNo",
-            "label": "FileNo",
+            "id": "year",
+            "name": "year",
+            "label": "Year",
             "classes": "col-md-6 form-control",
-            "placeholder": "Enter your fileNo",
+            "placeholder": "",
             "suggestion": "",
             "config": {
                 "disabled": false,
-                "readOnly": false,
+                "readOnly": true,
                 "checked": false,
                 "hidden": false
             },
@@ -57,8 +341,22 @@
                 "value": "",
                 "hidden": false
             },
-            "value": "",
-            "htmlElement": "text",
+            "options": [
+                {
+                    "id": "wk",
+                    "label": "Work"
+                },
+                {
+                    "id": "hm",
+                    "label": "Home"
+                },
+                {
+                    "id": "ot",
+                    "label": "Others"
+                }
+            ],
+            "value": "2023",
+            "htmlElement": "reference",
             "valid": false,
             "validation": {
                 "required": true,
@@ -73,11 +371,11 @@
         },
         {
             "type": "text",
-            "id": "type",
-            "name": "type",
-            "label": "type",
+            "id": "fileCode",
+            "name": "fileCode",
+            "label": "File-Code",
             "classes": "col-md-6 form-control",
-            "placeholder": "Enter your type",
+            "placeholder": "File-Code",
             "suggestion": "",
             "config": {
                 "disabled": false,
@@ -91,8 +389,22 @@
                 "value": "",
                 "hidden": false
             },
+            "options": [
+                {
+                    "id": "wk",
+                    "label": "Work"
+                },
+                {
+                    "id": "hm",
+                    "label": "Home"
+                },
+                {
+                    "id": "ot",
+                    "label": "Others"
+                }
+            ],
             "value": "",
-            "htmlElement": "text",
+            "htmlElement": "headId",
             "valid": false,
             "validation": {
                 "required": true,
@@ -125,144 +437,22 @@
                 "value": "",
                 "hidden": false
             },
+            "options": [
+                {
+                    "id": "wk",
+                    "label": "Work"
+                },
+                {
+                    "id": "hm",
+                    "label": "Home"
+                },
+                {
+                    "id": "ot",
+                    "label": "Others"
+                }
+            ],
             "value": "",
             "htmlElement": "text",
-            "valid": false,
-            "validation": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            },
-            "errorMessage": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            }
-        },
-        {
-            "type": "text",
-            "id": "remarks",
-            "name": "remarks",
-            "label": "Enter remarks",
-            "classes": "col-md-6  form-control",
-            "placeholder": "Enter your remarks",
-            "suggestion": "",
-            "config": {
-                "disabled": false,
-                "readOnly": false,
-                "checked": false,
-                "hidden": false
-            },
-            "provider": {
-                "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
-                "value": "",
-                "hidden": false
-            },
-            "value": "",
-            "htmlElement": "email",
-            "valid": false,
-            "validation": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            },
-            "errorMessage": {
-                "required": "This field is required",
-                "maxLength": "",
-                "minLength": ""
-            }
-        },
-        {
-            "type": "textarea",
-            "id": "reference",
-            "name": "reference",
-            "label": "Enter reference",
-            "classes": "col-md-6  form-control",
-            "placeholder": "Enter your reference",
-            "suggestion": "",
-            "config": {
-                "disabled": false,
-                "readOnly": false,
-                "checked": false,
-                "hidden": false
-            },
-            "provider": {
-                "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
-                "value": "",
-                "hidden": false
-            },
-            "value": "",
-            "htmlElement": "reference",
-            "valid": false,
-            "validation": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            },
-            "errorMessage": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            }
-        },
-        {
-            "type": "text",
-            "id": "headId",
-            "name": "headId",
-            "label": "Enter headId",
-            "classes": "col-md-6  form-control",
-            "placeholder": "Enter your headId",
-            "suggestion": "",
-            "config": {
-                "disabled": false,
-                "readOnly": false,
-                "checked": false,
-                "hidden": false
-            },
-            "provider": {
-                "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
-                "value": "",
-                "hidden": false
-            },
-            "value": "",
-            "htmlElement": "headId",
-            "valid": false,
-            "validation": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            },
-            "errorMessage": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            }
-        },
-        {
-            "type": "text",
-            "id": "fileCodeId",
-            "name": "fileCodeId",
-            "label": "Enter FileCodeId",
-            "classes": "col-md-6  form-control",
-            "placeholder": "Enter your fileCodeId",
-            "suggestion": "",
-            "config": {
-                "disabled": false,
-                "readOnly": false,
-                "checked": false,
-                "hidden": false
-            },
-            "provider": {
-                "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
-                "value": "",
-                "hidden": false
-            },
-            "value": "",
-            "htmlElement": "fileCodeId",
             "valid": false,
             "validation": {
                 "required": true,
@@ -279,7 +469,7 @@
             "type": "select",
             "id": "categoryId",
             "name": "categoryId",
-            "label": "Enter category",
+            "label": "Category",
             "classes": "",
             "placeholder": "Enter your categoryId",
             "suggestion": "",
@@ -295,6 +485,20 @@
                 "value": "",
                 "hidden": false
             },
+            "options": [
+                {
+                    "id": "wk",
+                    "label": "Work"
+                },
+                {
+                    "id": "hm",
+                    "label": "Home"
+                },
+                {
+                    "id": "ot",
+                    "label": "Others"
+                }
+            ],
             "value": "",
             "htmlElement": "reference",
             "valid": false,
@@ -310,12 +514,12 @@
             }
         },
         {
-            "type": "text",
-            "id": "year",
-            "name": "year",
-            "label": "Enter year",
-            "classes": "col-md-6  form-control",
-            "placeholder": "Enter year",
+            "type": "select",
+            "id": "subCategoryId",
+            "name": "subCategoryId",
+            "label": "Sub Category",
+            "classes": "",
+            "placeholder": "Enter your Sub categoryId",
             "suggestion": "",
             "config": {
                 "disabled": false,
@@ -329,8 +533,22 @@
                 "value": "",
                 "hidden": false
             },
+            "options": [
+                {
+                    "id": "wk",
+                    "label": "Work"
+                },
+                {
+                    "id": "hm",
+                    "label": "Home"
+                },
+                {
+                    "id": "ot",
+                    "label": "Others"
+                }
+            ],
             "value": "",
-            "htmlElement": "year",
+            "htmlElement": "reference",
             "valid": false,
             "validation": {
                 "required": true,
@@ -363,6 +581,20 @@
                 "value": "",
                 "hidden": false
             },
+            "options": [
+                {
+                    "id": "wk",
+                    "label": "Work"
+                },
+                {
+                    "id": "hm",
+                    "label": "Home"
+                },
+                {
+                    "id": "ot",
+                    "label": "Others"
+                }
+            ],
             "value": "",
             "htmlElement": "userPostId",
             "valid": false,
@@ -378,12 +610,12 @@
             }
         },
         {
-            "type": "text",
-            "id": "currentUser",
-            "name": "currentUser",
-            "label": "Enter year",
+            "type": "textarea",
+            "id": "remarks",
+            "name": "remarks",
+            "label": "Remarks",
             "classes": "col-md-6  form-control",
-            "placeholder": "Enter your currentUser",
+            "placeholder": "Enter your remarks",
             "suggestion": "",
             "config": {
                 "disabled": false,
@@ -397,8 +629,22 @@
                 "value": "",
                 "hidden": false
             },
+            "options": [
+                {
+                    "id": "wk",
+                    "label": "Work"
+                },
+                {
+                    "id": "hm",
+                    "label": "Home"
+                },
+                {
+                    "id": "ot",
+                    "label": "Others"
+                }
+            ],
             "value": "",
-            "htmlElement": "currentUser",
+            "htmlElement": "email",
             "valid": false,
             "validation": {
                 "required": true,
@@ -406,18 +652,18 @@
                 "minLength": ""
             },
             "errorMessage": {
-                "required": true,
+                "required": "This field is required",
                 "maxLength": "",
                 "minLength": ""
             }
         },
         {
             "type": "text",
-            "id": "currentState",
-            "name": "currentState",
-            "label": "Enter year",
+            "id": "reference",
+            "name": "reference",
+            "label": "Reference",
             "classes": "col-md-6  form-control",
-            "placeholder": "Enter currentState",
+            "placeholder": "Enter reference",
             "suggestion": "",
             "config": {
                 "disabled": false,
@@ -431,8 +677,22 @@
                 "value": "",
                 "hidden": false
             },
+            "options": [
+                {
+                    "id": "wk",
+                    "label": "Work"
+                },
+                {
+                    "id": "hm",
+                    "label": "Home"
+                },
+                {
+                    "id": "ot",
+                    "label": "Others"
+                }
+            ],
             "value": "",
-            "htmlElement": "currentState",
+            "htmlElement": "reference",
             "valid": false,
             "validation": {
                 "required": true,
@@ -440,41 +700,7 @@
                 "minLength": ""
             },
             "errorMessage": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            }
-        },
-        {
-            "type": "text",
-            "id": "dealingOrganizationId",
-            "name": "dealingOrganizationId",
-            "label": "Enter year",
-            "classes": "col-md-6  form-control",
-            "placeholder": "Enter dealingOrganizationId",
-            "suggestion": "",
-            "config": {
-                "disabled": false,
-                "readOnly": false,
-                "checked": false,
-                "hidden": false
-            },
-            "provider": {
-                "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
-                "value": "",
-                "hidden": false
-            },
-            "value": "",
-            "htmlElement": "dealingOrganizationId",
-            "valid": false,
-            "validation": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            },
-            "errorMessage": {
-                "required": true,
+                "required": "This field is required",
                 "maxLength": "",
                 "minLength": ""
             }

@@ -22,12 +22,13 @@ const Renderer = (props) => {
     const { formObject } = props.fieldData;
     const [fieldArray, setFieldArray] = useState(props.fieldArray);
     const fieldChange = (event, field, index, fieldData) => {
-        console.log("***** " + event.target.name)
+        console.log(event)
         setFieldArray(prev => prev.map((item, idx) => {
             if (index === idx) {
                 if (field.type === 'select') {
                     item.value = event.value;
-                    fieldData[event.target.name] = event.value;
+                    
+                    fieldData[event.name] = event.value;
                 } else if (field.type === "tel") {
                     item.value = event;
                     fieldData[event.target.name] = event;
@@ -50,11 +51,7 @@ const Renderer = (props) => {
                 });
             });
         }
-        else {
-            fieldArray.map((fItem, index) => {
-                fItem.value = "";
-            });
-        }
+        
         return fieldArray;
     }
 
