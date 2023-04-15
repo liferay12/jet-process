@@ -11,6 +11,7 @@
             "classes": "col-md-6 form-control",
             "placeholder": "Enter your user id",
             "suggestion": "",
+            "listColumn":true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -45,6 +46,7 @@
             "classes": "col-md-6 form-control",
             "placeholder": "Enter your first name",
             "suggestion": "",
+            "listColumn":true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -79,6 +81,7 @@
             "classes": "col-md-6 form-control",
             "placeholder": "Enter your last name",
             "suggestion": "",
+            "listColumn":true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -108,6 +111,7 @@
             "classes": "col-md-6 form-control",
             "placeholder": "Enter your user name",
             "suggestion": "",
+            "listColumn":true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -137,6 +141,7 @@
             "classes": "col-md-6  form-control",
             "placeholder": "Enter your email address",
             "suggestion": "",
+            "listColumn":false,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -166,6 +171,7 @@
             "classes": "col-md-6  form-control",
             "placeholder": "Enter your password",
             "suggestion": "",
+            "listColumn":false,
             "config": {
                 "disabled": false,
                 "readOnly": false,

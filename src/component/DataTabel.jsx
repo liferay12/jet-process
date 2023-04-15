@@ -24,44 +24,58 @@ export const DataTabel = (props) => {
 
     }
     useEffect(() => {
-        const fetchedButtons = [];
-        columns.map((item, index) => {
-            if (item.name === "Actions" && item.cell.length !== 0) {
-                fetchedButtons.push({
-                    "name": "Actions", cell: (row) => (<>
-                        {/* <Dropdown>
-                            <Dropdown.Toggle>
-                                <i className="fa-thin fa-ellipsis-vertical"></i>
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu> */}
-                        <div class="dropdown">
-                            <div type="button" data-bs-toggle="dropdown">
-                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-                            </div>
-                            <ul class="dropdown-menu">
-                                {item.cell.map((i) => {
-                                    return (
-                                        <>
+        console.log("***************" + props.formJSON.title);
+        let newColunm = [];
+        props.formJSON.fields.map((field, index) => {
+            console.warn("-----" + field.name)
+            if (field.listColumn) {
 
-                                            <li onClick={() => (handleShow(i.name, row.userId))}><span className={i.class} ><i class={i.icon} aria-hidden="true"></i>{i.lebel}</span></li>
-
-
-                                            {/* <Dropdown.Item onClick={() => (handleShow(i.name, row.userId))}><span className={i.class} ><i class={i.icon} aria-hidden="true"></i>{i.lebel}</span></Dropdown.Item> */}
-                                            {/* <button className={i.class} onClick={() => (handleShow(i.name, row.userId))}><i class={i.icon} aria-hidden="true">{i.lebel}</i></button> */}
-                                        </>
-                                    )
-                                })
-                                }
-                            </ul>
-                        </div>
-                        {/* </Dropdown.Menu></Dropdown> */}
-                    </>)
-                })
-            } else {
-                fetchedButtons.push(item);
+                let obj = {
+                    name: field.name,
+                    selector: field.id,
+                    sortable: true
+                }
+                newColunm.push(obj)
             }
         });
-        setColumn(fetchedButtons);
+        const fetchedButtons = [];
+        // columns.map((item, index) => {
+        //     if (item.name === "Actions" && item.cell.length !== 0) {
+        //         fetchedButtons.push({
+        //             "name": "Actions", cell: (row) => (<>
+        //                 {/* <Dropdown>
+        //                     <Dropdown.Toggle>
+        //                         <i className="fa-thin fa-ellipsis-vertical"></i>
+        //                     </Dropdown.Toggle>
+        //                     <Dropdown.Menu> */}
+        //                 <div class="dropdown">
+        //                     <div type="button" data-bs-toggle="dropdown">
+        //                         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        //                     </div>
+        //                     <ul class="dropdown-menu">
+        //                         {item.cell.map((i) => {
+        //                             return (
+        //                                 <>
+
+        //                                     <li onClick={() => (handleShow(i.name, row.userId))}><span className={i.class} ><i class={i.icon} aria-hidden="true"></i>{i.lebel}</span></li>
+
+
+        //                                     {/* <Dropdown.Item onClick={() => (handleShow(i.name, row.userId))}><span className={i.class} ><i class={i.icon} aria-hidden="true"></i>{i.lebel}</span></Dropdown.Item> */}
+        //                                     {/* <button className={i.class} onClick={() => (handleShow(i.name, row.userId))}><i class={i.icon} aria-hidden="true">{i.lebel}</i></button> */}
+        //                                 </>
+        //                             )
+        //                         })
+        //                         }
+        //                     </ul>
+        //                 </div>
+        //                 {/* </Dropdown.Menu></Dropdown> */}
+        //             </>)
+        //         })
+        //     } else {
+        //         fetchedButtons.push(item);
+        //     }
+        // });
+        setColumn(newColunm);
     }, []);
 
     // Check Actions to render component in to the modal
