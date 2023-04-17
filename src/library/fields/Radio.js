@@ -9,7 +9,7 @@ const Radio = (props) => {
         <div className="form-group mt-3">
             <label>{props.fieldConfig.label}</label>
             <br />
-            {props.fieldConfig.options.map((option) => {
+            {props.fieldConfig.radioOptions.map((option) => {
                 return <span key={option.id}><input type={props.fieldConfig.type}
                     className={props.fieldConfig.classes}
                     name={props.fieldConfig.name}

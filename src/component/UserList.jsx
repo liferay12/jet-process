@@ -23,7 +23,7 @@ export const UserList = () => {
     }, [search]);
     return (
         <>
-            <DataTabel data={FilterUsers} setSearch={setSearch} url={'localhost:8080/api/v1/user'}></DataTabel>
+            <DataTabel data={FilterUsers} setSearch={setSearch} colunmData={''} url={'localhost:8080/api/v1/user'}></DataTabel>
         </>
     )
 

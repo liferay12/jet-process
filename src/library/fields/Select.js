@@ -5,30 +5,33 @@ import 'bootstrap/dist/js/bootstrap';
 import 'jquery/dist/jquery';
 import { useState, useEffect } from "react";
 import axios from "axios"
-
+let a = {};
 const Select = (props) => {
     const [provider, setProvider] = useState([]);
-    const [defaultValue, setDefaultValue] = useState({ value: "", label: "" });
+    const [defaultValue, setDefaultValue] = useState({});
+    const [val, setVal] = useState({});
     useEffect(() => {
-        console.log(" calling provider......")
-        console.log("------> ")
-        console.log("====" + props.fieldConfig.options.data)
+
         if (props.fieldConfig.provider.url !== "") {
             setDefaultValue({ value: props.fieldConfig.provider.value, label: props.fieldConfig.provider.label })
             getProviderList(props.fieldConfig.provider.url);
         } else {
-            console.log("====" + props.fieldConfig.options.data)
-            setDefaultValue({ value: props.fieldConfig.options.value, label: props.fieldConfig.options.label })
-            setProvider(props.fieldConfig.options.data)
+            setProvider(props.fieldConfig.provider.options)
         }
+        setDefaultValue(a);
 
     }, [])
 
     async function getProviderList(url) {
-        let data = await axios.get(url)
+        let data = await axios.get(url).catch((err) => {
+            console.error("Anable to fetch data : "+err);
+        })
         let data1 = [];
+        console.log(data)
         data.data.map((item) => {
-            let obj = { value: item.id, label: item.email };
+            let id = item.code;
+            let value = item.name;
+            let obj = { value: id, label: value };
             data1.push(obj);
         })
         setProvider(data1)
@@ -39,7 +42,6 @@ const Select = (props) => {
     return (
         <div className='form-group mt-3'>
             <label htmlFor={props.fieldConfig.id}>{props.fieldConfig.label}</label>
-            {console.log(defaultValue.label)}
             <ReactSelect
                 id={props.fieldConfig.id}
                 name={props.fieldConfig.name}
@@ -53,7 +55,7 @@ const Select = (props) => {
                 autocomplete={props.fieldConfig.validation.autocomplete}
                 autofocus={props.fieldConfig.validation.autofocus}
                 options={provider}
-                defaultValue={props.fieldConfig.options.selectedValue || 'Select'}
+                defaultValue={props.fieldConfig.provider.selectedValue || 'select'}
             // multiple={props.fieldConfig.multiple}
             // suggestion={props.fieldConfig.suggestion}
             />

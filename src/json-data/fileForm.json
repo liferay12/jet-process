@@ -22,16 +22,25 @@
     ],
     "actions": [
         {
+            "classes": "btn btn-lg btn-success ms-3",
             "name": "update",
             "type": "submit",
             "label": "Update",
-            "applyto": ""
+            "applyto": "row"
         },
         {
+            "classes": "btn btn-lg btn-primary ms-3",
             "name": "save",
             "type": "submit",
             "label": "Save",
-            "applyto": ""
+            "applyto": "table"
+        },
+        {
+            "classes": "btn btn-lg btn-danger ms-3",
+            "name": "cancel",
+            "type": "reset",
+            "label": "Cancel",
+            "applyto": "table"
         }
     ],
     "fields": [
@@ -51,20 +60,12 @@
             },
             "provider": {
                 "selectedValue": {
-                    "label": "",
-                    "value": ""
+                    "value": "electronic",
+                    "label": "Electronic"
                 },
                 "label": "test",
                 "url": "",
-                "value": "",
-                "hidden": false
-            },
-            "options": {
-                "selectedValue": {
-                    "label": "Electronic",
-                    "value": "electronic"
-                },
-                "data": [
+                "options": [
                     {
                         "value": "electronic",
                         "label": "Electronic"
@@ -73,7 +74,9 @@
                         "value": "physical",
                         "label": "Physical"
                     }
-                ]
+                ],
+                "value": "",
+                "hidden": false
             },
             "value": "",
             "htmlElement": "text",
@@ -105,20 +108,12 @@
             },
             "provider": {
                 "selectedValue": {
-                    "label": "",
-                    "value": ""
+                    "value": "NON-SFS",
+                    "label": "NON-SFS"
                 },
                 "label": "test",
                 "url": "",
-                "value": "",
-                "hidden": false
-            },
-            "options": {
-                "selectedValue": {
-                    "label": "NON-SFS",
-                    "value": "NON-SFS"
-                },
-                "data": [
+                "options": [
                     {
                         "value": "NON-SFS",
                         "label": "NON-SFS"
@@ -127,8 +122,27 @@
                         "value": "physical",
                         "label": "Physical"
                     }
-                ]
+                ],
+                "value": "",
+                "hidden": false
             },
+            "radioOptions": [
+                {
+                    "id": "male",
+                    "label": "Male",
+                    "value": "MALE"
+                },
+                {
+                    "id": "female",
+                    "label": "Female",
+                    "value": "FEMALE"
+                },
+                {
+                    "id": "other",
+                    "label": "Other",
+                    "value": "OTHER"
+                }
+            ],
             "value": "",
             "htmlElement": "text",
             "valid": false,
@@ -163,16 +177,10 @@
                     "value": ""
                 },
                 "label": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "http://localhost:8080/api/v1/jetprocess/basichead",
                 "value": "",
+                "options": [],
                 "hidden": false
-            },
-            "options": {
-                "selectedValue": {
-                    "label": "",
-                    "value": ""
-                },
-                "data": []
             },
             "value": "",
             "htmlElement": "text",
@@ -208,16 +216,10 @@
                     "value": ""
                 },
                 "label": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "http://localhost:8080/api/v1/jetprocess/primaryhead/1",
+                "options": [],
                 "value": "",
                 "hidden": false
-            },
-            "options": {
-                "selectedValue": {
-                    "label": "",
-                    "value": ""
-                },
-                "data": []
             },
             "value": "",
             "htmlElement": "text",
@@ -253,16 +255,10 @@
                     "value": ""
                 },
                 "label": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "http://localhost:8080/api/v1/jetprocess/secondaryhead/1",
+                "data": [],
                 "value": "",
                 "hidden": false
-            },
-            "options": {
-                "selectedValue": {
-                    "label": "",
-                    "value": ""
-                },
-                "data": []
             },
             "value": "",
             "htmlElement": "text",
@@ -297,15 +293,10 @@
                     "label": "",
                     "value": ""
                 },
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "http://localhost:8080/api/v1/jetprocess/tertiaryhead/1",
+                "options": [],
+                "value": "",
                 "hidden": false
-            },
-            "options": {
-                "selectedValue": {
-                    "label": "",
-                    "value": ""
-                },
-                "data": []
             },
             "value": "",
             "htmlElement": "text",
@@ -337,24 +328,11 @@
             },
             "provider": {
                 "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "",
+                "options": [],
                 "value": "",
                 "hidden": false
             },
-            "options": [
-                {
-                    "id": "wk",
-                    "label": "Work"
-                },
-                {
-                    "id": "hm",
-                    "label": "Home"
-                },
-                {
-                    "id": "ot",
-                    "label": "Others"
-                }
-            ],
             "value": "2023",
             "htmlElement": "reference",
             "valid": false,
@@ -385,24 +363,11 @@
             },
             "provider": {
                 "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "http://jsonplaceholder.typicode.com/posts/1/comments",
+                "options": [],
                 "value": "",
                 "hidden": false
             },
-            "options": [
-                {
-                    "id": "wk",
-                    "label": "Work"
-                },
-                {
-                    "id": "hm",
-                    "label": "Home"
-                },
-                {
-                    "id": "ot",
-                    "label": "Others"
-                }
-            ],
             "value": "",
             "htmlElement": "headId",
             "valid": false,
@@ -433,24 +398,11 @@
             },
             "provider": {
                 "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "http://jsonplaceholder.typicode.com/posts/1/comments",
+                "options": [],
                 "value": "",
                 "hidden": false
             },
-            "options": [
-                {
-                    "id": "wk",
-                    "label": "Work"
-                },
-                {
-                    "id": "hm",
-                    "label": "Home"
-                },
-                {
-                    "id": "ot",
-                    "label": "Others"
-                }
-            ],
             "value": "",
             "htmlElement": "text",
             "valid": false,
@@ -481,24 +433,11 @@
             },
             "provider": {
                 "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "http://jsonplaceholder.typicode.com/posts/1/comments",
+                "options": [],
                 "value": "",
                 "hidden": false
             },
-            "options": [
-                {
-                    "id": "wk",
-                    "label": "Work"
-                },
-                {
-                    "id": "hm",
-                    "label": "Home"
-                },
-                {
-                    "id": "ot",
-                    "label": "Others"
-                }
-            ],
             "value": "",
             "htmlElement": "reference",
             "valid": false,
@@ -529,24 +468,11 @@
             },
             "provider": {
                 "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "http://jsonplaceholder.typicode.com/posts/1/comments",
+                "options": [],
                 "value": "",
                 "hidden": false
             },
-            "options": [
-                {
-                    "id": "wk",
-                    "label": "Work"
-                },
-                {
-                    "id": "hm",
-                    "label": "Home"
-                },
-                {
-                    "id": "ot",
-                    "label": "Others"
-                }
-            ],
             "value": "",
             "htmlElement": "reference",
             "valid": false,
@@ -577,24 +503,11 @@
             },
             "provider": {
                 "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "http://jsonplaceholder.typicode.com/posts/1/comments",
+                "options": [],
                 "value": "",
                 "hidden": false
             },
-            "options": [
-                {
-                    "id": "wk",
-                    "label": "Work"
-                },
-                {
-                    "id": "hm",
-                    "label": "Home"
-                },
-                {
-                    "id": "ot",
-                    "label": "Others"
-                }
-            ],
             "value": "",
             "htmlElement": "userPostId",
             "valid": false,
@@ -625,24 +538,11 @@
             },
             "provider": {
                 "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "http://jsonplaceholder.typicode.com/posts/1/comments",
+                "options": [],
                 "value": "",
                 "hidden": false
             },
-            "options": [
-                {
-                    "id": "wk",
-                    "label": "Work"
-                },
-                {
-                    "id": "hm",
-                    "label": "Home"
-                },
-                {
-                    "id": "ot",
-                    "label": "Others"
-                }
-            ],
             "value": "",
             "htmlElement": "email",
             "valid": false,
@@ -673,24 +573,11 @@
             },
             "provider": {
                 "id": "test",
-                "url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+                "url": "http://jsonplaceholder.typicode.com/posts/1/comments",
+                "options": [],
                 "value": "",
                 "hidden": false
             },
-            "options": [
-                {
-                    "id": "wk",
-                    "label": "Work"
-                },
-                {
-                    "id": "hm",
-                    "label": "Home"
-                },
-                {
-                    "id": "ot",
-                    "label": "Others"
-                }
-            ],
             "value": "",
             "htmlElement": "reference",
             "valid": false,

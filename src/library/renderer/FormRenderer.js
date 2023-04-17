@@ -13,7 +13,9 @@ const Form = (props) => {
         var form = new FormData();
         fieldArray.map((item, index) => {
             console.log('item..****.... ', item.value)
+            console.log(item.name,"---",item.value)
             if (item.value != "") {
+                console.info(item.value)
                 form.append(item.name, item.value);
 
             }
@@ -23,7 +25,8 @@ const Form = (props) => {
         if (isEdit !== "" && isEdit != undefined) {
 
         }
-        axios.post(props.url, form, {
+        console.warn(form.get("nature"))
+        axios.post('http://localhost:8080/api/v1/docFile', form, {
             headers: {
                 "Content-Type": "application/json"
             }
@@ -43,7 +46,16 @@ const Form = (props) => {
             <form onSubmit={(event) => { submit(event) }}>
                 <Renderer fieldArray={fieldArray} fieldData={props.editData} setFieldArray={setFieldArray} />
                 <div className='text-center m-3 mb-2'>
-                    <button type='submit' className='btn btn-lg btn-primary '>Submit</button>
+                    {console.log("$$$$$$$$$$$")}
+
+                    {
+                        formObject.actions.map((item, index) =>
+                            <>
+
+                                <button key={`${item.id}+${index}`} type={`${item.type}`} id={item.id} className={`${item.classes}`}>{item.label}</button>
+                            </>
+                        )
+                    }
                 </div>
             </form>
         </div>

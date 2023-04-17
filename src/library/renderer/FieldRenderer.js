@@ -51,7 +51,11 @@ const Renderer = (props) => {
                 });
             });
         }
-        
+        else {
+            fieldArray.map((fItem, index) => {
+                fItem.value = "";
+            });
+        }
         return fieldArray;
     }
 
