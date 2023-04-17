@@ -21,7 +21,7 @@ export const Topbar = (props) => {
 						<div className="collapse navbar-collapse justify-content-between">
 							<div className="header-left">
 								<div className="input-group search-area">
-									<span className="input-group-text"><a href="javascript:void(0)">
+									<span className="input-group-text"><a href="">
 										<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<circle cx="8.78605" cy="8.78605" r="8.23951" stroke="white" stroke-linecap="round" stroke-linejoin="round"></circle>
 											<path d="M14.5168 14.9447L17.7471 18.1667" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -36,7 +36,7 @@ export const Topbar = (props) => {
 									props.data.map((item) => {
 										if (item.type === "setting") {
 											return (
-												<li className="nav-item notification_dropdown" >
+												<li className="nav-item notification_dropdown" key={item.name}>
 													<NavLink className="nav-link " to={item.path} data-bs-toggle="dropdown" data-target="#setting">
 														{item.name}
 														<Setting></Setting>
@@ -46,7 +46,7 @@ export const Topbar = (props) => {
 										}
 										else if (item.type === "notification") {
 											return (
-												<li className="nav-item  notification_dropdown" >
+												<li className="nav-item  notification_dropdown" key={item.name}>
 													<NavLink className="nav-link " to={item.path} data-bs-toggle="dropdown" data-target="#notification">
 														{item.name}
 														<Notification></Notification>
@@ -55,7 +55,7 @@ export const Topbar = (props) => {
 										}
 										else if (item.type === "message") {
 											return (
-												<li className="nav-item notification_dropdown" >
+												<li className="nav-item notification_dropdown" key={item.name}>
 													<NavLink className="nav-link " to={item.path} data-bs-toggle="dropdown" data-target="#message">
 														{item.name}
 														<ChatBox></ChatBox>
@@ -69,7 +69,7 @@ export const Topbar = (props) => {
 												// 		{item.name}
 												// 	</NavLink>
 												// </li>
-												<li className="nav-item align-items-center header-border">
+												<li className="nav-item align-items-center header-border">key={item.name}
 													<NavLink className="nav-link " to={item.path} >
 														{item.name}
 
@@ -86,7 +86,7 @@ export const Topbar = (props) => {
 															{item.name}
 														</NavLink>
 													</li> */}
-													<li className="nav-item align-items-center header-border">
+													<li className="nav-item align-items-center header-border" key={item.name}>
 														<NavLink className="nav-link " to={item.path} >
 															{item.name}
 
@@ -97,7 +97,7 @@ export const Topbar = (props) => {
 										}
 										else {
 											return (
-												<li className="nav-item notification_dropdown" >
+												<li className="nav-item notification_dropdown" key={item.name}>
 													<a className="nav-link" href={item.path} >
 														{item.name}
 

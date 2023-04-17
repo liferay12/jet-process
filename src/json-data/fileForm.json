@@ -26,21 +26,49 @@
             "name": "update",
             "type": "submit",
             "label": "Update",
-            "applyto": "row"
+            "applyto": "form"
         },
         {
             "classes": "btn btn-lg btn-primary ms-3",
             "name": "save",
             "type": "submit",
             "label": "Save",
-            "applyto": "table"
+            "applyto": "form"
         },
         {
             "classes": "btn btn-lg btn-danger ms-3",
             "name": "cancel",
             "type": "reset",
             "label": "Cancel",
+            "applyto": "form"
+        },
+        {
+            "name": "addFile",
+            "label":"Add File",
+            "icon": "",
+            "classes": "btn btn-sm btn-primary",
             "applyto": "table"
+        },
+        {
+            "name": "edit",
+            "label":"Edit",
+            "icon": "fa fa-pencil",
+            "classes": "btn",
+            "applyto": "row"
+        },
+        {
+            "name": "delete",
+            "label":"Delete",
+            "icon": "fa fa-trash",
+            "classes": "btn",
+            "applyto": "row"
+        },
+        {
+            "name": "update",
+            "label":"Update",
+            "icon": "fa fa-cloud-upload",
+            "classes": "btn",
+            "applyto": "row"
         }
     ],
     "fields": [
@@ -52,6 +80,7 @@
             "classes": "",
             "placeholder": "Enter your nature",
             "suggestion": "",
+            "listColumn":true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -100,6 +129,7 @@
             "classes": "",
             "placeholder": "Enter your type",
             "suggestion": "",
+            "listColumn":false,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -166,6 +196,7 @@
             "classes": "col-md-6 form-control",
             "placeholder": "",
             "suggestion": "",
+            "listColumn":false,
             "config": {
                 "disabled": false,
                 "readOnly": true,
@@ -201,6 +232,7 @@
             "classes": "col-md-6 form-control",
             "placeholder": "File-Code",
             "suggestion": "",
+            "listColumn":true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -236,6 +268,7 @@
             "classes": "col-md-6 form-control",
             "placeholder": "Enter your subject",
             "suggestion": "",
+            "listColumn":true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -272,6 +305,7 @@
             "classes": "col-md-6  form-control",
             "placeholder": "Enter your userPostId",
             "suggestion": "",
+            "listColumn":true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -307,6 +341,7 @@
             "classes": "col-md-6  form-control",
             "placeholder": "Enter your remarks",
             "suggestion": "",
+            "listColumn":false,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -342,6 +377,7 @@
             "classes": "col-md-6  form-control",
             "placeholder": "Enter reference",
             "suggestion": "",
+            "listColumn":false,
             "config": {
                 "disabled": false,
                 "readOnly": false,

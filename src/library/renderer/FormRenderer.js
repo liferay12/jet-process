@@ -46,8 +46,6 @@ const Form = (props) => {
             <form onSubmit={(event) => { submit(event) }}>
                 <Renderer fieldArray={fieldArray} fieldData={props.editData} setFieldArray={setFieldArray} />
                 <div className='text-center m-3 mb-2'>
-                    {console.log("$$$$$$$$$$$")}
-
                     {
                         formObject.actions.map((item, index) =>
                             <>

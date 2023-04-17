@@ -5,8 +5,9 @@ import DataTable from 'react-data-table-component';
 import { useDownloadExcel } from 'react-export-table-to-excel';
 import { Button, Dropdown, Modal } from 'react-bootstrap';
 import UserRegistration from './UserRegistration';
-import columns from '../json-data/DataTableColumns.json';
+//import columns from '../json-data/DataTableColumns.json';
 import { Delete } from './Delete';
+import { File } from './File';
 
 
 export const DataTabel = (props) => {
@@ -20,68 +21,86 @@ export const DataTabel = (props) => {
         setShow(true);
         setEvents(name);
         setEditrow(id);
-
-
     }
-    useEffect(() => {
-        console.log("***************" + props.formJSON.title);
-        let newColunm = [];
-        props.formJSON.fields.map((field, index) => {
-            console.warn("-----" + field.name)
-            if (field.listColumn) {
 
+    useEffect(() => {
+        let newColumn = [];
+        props.formJSON.fields.map((field, index) => {
+            if (field.listColumn) {
                 let obj = {
                     name: field.name,
                     selector: field.id,
                     sortable: true
                 }
-                newColunm.push(obj)
+                newColumn.push(obj)
             }
         });
+        let cells = [];
+        let tAction=[];
+        props.formJSON.actions.map((action, index) => {
+            if (action.applyto === "row") {
+                let act = {
+                    name: action.name,
+                    label: action.label,
+                    icon: action.icon,
+                    class: action.classes
+                }
+                cells.push(act);
+            }else if(action.applyto === "table"){
+                let tableAction = {
+                    name: action.name,
+                    label: action.label,
+                    icon: action.icon,
+                    class: action.classes
+                }
+                tAction.push(tableAction);
+            }
+        });
+        newColumn.push({ name: "Actions", cell: cells })
+
         const fetchedButtons = [];
-        // columns.map((item, index) => {
-        //     if (item.name === "Actions" && item.cell.length !== 0) {
-        //         fetchedButtons.push({
-        //             "name": "Actions", cell: (row) => (<>
-        //                 {/* <Dropdown>
-        //                     <Dropdown.Toggle>
-        //                         <i className="fa-thin fa-ellipsis-vertical"></i>
-        //                     </Dropdown.Toggle>
-        //                     <Dropdown.Menu> */}
-        //                 <div class="dropdown">
-        //                     <div type="button" data-bs-toggle="dropdown">
-        //                         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-        //                     </div>
-        //                     <ul class="dropdown-menu">
-        //                         {item.cell.map((i) => {
-        //                             return (
-        //                                 <>
+        newColumn.map((item, index) => {
+            if (item.name === "Actions" && item.cell.length !== 0) {
+                fetchedButtons.push({
+                    "name": "Actions", cell: (row) => (<>
+                        <div class="dropdown">
+                            <div type="button" data-bs-toggle="dropdown">
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                            </div>
+                            <ul class="dropdown-menu">
+                                {item.cell.map((i) => {
+                                    return (
+                                        <>
+                                            <li onClick={() => (handleShow(i.name, row.userId))}><div className={i.class} >&nbsp; &nbsp;<i class={i.icon} aria-hidden="true"></i>&nbsp; {i.label}</div></li>
+                                        </>
+                                    )
+                                })
+                                }
+                            </ul>
+                        </div>
 
-        //                                     <li onClick={() => (handleShow(i.name, row.userId))}><span className={i.class} ><i class={i.icon} aria-hidden="true"></i>{i.lebel}</span></li>
-
-
-        //                                     {/* <Dropdown.Item onClick={() => (handleShow(i.name, row.userId))}><span className={i.class} ><i class={i.icon} aria-hidden="true"></i>{i.lebel}</span></Dropdown.Item> */}
-        //                                     {/* <button className={i.class} onClick={() => (handleShow(i.name, row.userId))}><i class={i.icon} aria-hidden="true">{i.lebel}</i></button> */}
-        //                                 </>
-        //                             )
-        //                         })
-        //                         }
-        //                     </ul>
-        //                 </div>
-        //                 {/* </Dropdown.Menu></Dropdown> */}
-        //             </>)
-        //         })
-        //     } else {
-        //         fetchedButtons.push(item);
-        //     }
-        // });
-        setColumn(newColunm);
+                    </>)
+                })
+            }
+            // else if (item.name === "table"){
+            //     {item.cell.map((i) => {
+                    
+            //             let button=    <button onClick={handleClick} className={i.class}><i class={i.icon} aria-hidden="true"></i> {i.label}</button>
+                              
+            //     })
+            //     }
+            // }
+            else {
+                fetchedButtons.push(item);
+            }
+        });
+        setColumn(fetchedButtons);
     }, []);
 
     // Check Actions to render component in to the modal
     let modalContent;
     if (events === "edit") {
-        modalContent = <UserRegistration data={editrow}></UserRegistration>;
+        modalContent = <File data={editrow}></File>;
     } else if (events === "delete") {
         modalContent = <Delete data={editrow} url={props.url}></Delete>;
     }
@@ -93,30 +112,6 @@ export const DataTabel = (props) => {
     }
 
 
-    // function addUser() {
-    //     console.log("Add user");
-    //     modalContent = <UserRegistration></UserRegistration>
-    // }
-
-    // Fetch user list from an api
-    // const [users, setUsers] = useState([]);
-    // const [search, setSearch] = useState("");
-    // const [FilterUsers, setFilterUsers] = useState([]);
-    // useEffect(() => {
-    //     async function fetchUserList() {
-    //         let user = await axios.get('http://localhost:8080/api/v1/user')
-    //         setUsers(user.data);
-    //         setFilterUsers(user.data);
-    //     };
-    //     fetchUserList();
-    // }, []);
-    // useEffect(() => {
-    //     const result = users.filter(user => {
-    //         return null; //user.firstName.toLowerCase().match(search.toLowerCase());
-    //     })
-    //     setFilterUsers(result);
-    // }, [search]);
-
     // To export table into excell sheet
     const tableRef = useRef(null);
     const { onDownload } = useDownloadExcel({
@@ -125,12 +120,6 @@ export const DataTabel = (props) => {
         sheet: 'Users'
     })
 
-    // const addUser = (add) => {
-    //     console.log("Addig user ********************* " + add)
-    //     setEvents(add);
-    //     handleShow(add);
-    //     //modalContent = <UserRegistration></UserRegistration>
-    // }
 
     // Add Button click method
     const [isShown, setIsShown] = useState("");
@@ -139,7 +128,6 @@ export const DataTabel = (props) => {
         //setIsShown(current => !current);
         setIsShown("add");
         handleShow(isShown, "");
-
         // 👇️ or simply set it to true
         // setIsShown(true);
     };
@@ -147,7 +135,7 @@ export const DataTabel = (props) => {
     return (
         <>
             <DataTable
-                title=""
+                title={props.formJSON.title}
                 columns={column}
                 data={props.data}
                 pagination
@@ -159,7 +147,7 @@ export const DataTabel = (props) => {
                 actions={(
                     <>
                         <button onClick={onDownload} className="btn btn-sm btn-info">Export</button>
-                        {/* <button onClick={handleClick} className="btn btn-sm btn-primary">+ Add User</button> */}
+                        <button onClick={handleClick} className="btn btn-sm btn-primary">+ Add User</button>
 
                     </>
                 )}
@@ -188,9 +176,6 @@ export const DataTabel = (props) => {
                 </Modal.Header>
                 <Modal.Body>
                     {modalContent}
-                    {/* {modalCon} */}
-                    {/* {isShown ? <UserRegistration /> : modalContent} */}
-                    {/* <UserRegistration data={editrow}></UserRegistration> */}
                 </Modal.Body>
                 {/* <Modal.Footer style={{ background: "#f0f8ff" }}>
                     <Button variant="secondary" onClick={handleClose}>
@@ -200,5 +185,5 @@ export const DataTabel = (props) => {
                 </Modal.Footer> */}
             </Modal>
         </>
-    )
+    );
 }

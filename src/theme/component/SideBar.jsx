@@ -82,7 +82,7 @@ export const SideBar = (props) => {
                     {
                         props.themeData.map((section, i) =>
                             <>
-                                <li className="menu-title" >{section.title}</li>
+                                <li className="menu-title" key={section.title} >{section.title}</li>
                                 {
                                     section.option.map((item, j) =>
                                         <>
@@ -90,7 +90,7 @@ export const SideBar = (props) => {
                                                 item.subItem.length != 0 ?
                                                     (
 
-                                                        <li className="">
+                                                        <li className="" key={item.name}>
                                                             <NavLink className="has-arrow " id="item" onClick={() => handleMenuPosition(item.name)} to="#" aria-expanded="false" >
                                                                 <div className="menu-icon">
                                                                     {item.icon}
@@ -116,7 +116,7 @@ export const SideBar = (props) => {
                                                         </li>
                                                     ) :
                                                     (
-                                                        <li><NavLink to={item.path} className="" aria-expanded="false">
+                                                        <li key={item.name}><NavLink to={item.path} className="" aria-expanded="false">
                                                             <div className="menu-icon">
                                                                 {item.icon}
                                                             </div>
