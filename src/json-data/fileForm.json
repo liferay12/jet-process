@@ -308,7 +308,7 @@
             },
             "errorMessage": {
                 "required": true,
-                "maxLength": "",
+                "maxLength": "1",
                 "minLength": ""
             }
         },
