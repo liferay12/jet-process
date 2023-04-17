@@ -13,7 +13,7 @@ const Form = (props) => {
         var form = new FormData();
         fieldArray.map((item, index) => {
             console.log('item..****.... ', item.value)
-            console.info("---",item.value)
+            console.log(item.name,"---",item.value)
             if (item.value != "") {
                 console.info(item.value)
                 form.append(item.name, item.value);
@@ -21,10 +21,10 @@ const Form = (props) => {
             }
         })
 
-        let isEdit = props.editData;
-        if (isEdit !== "" && isEdit != undefined) {
+        // let isEdit = props.editData;
+        // if (isEdit !== "" && isEdit != undefined) {
 
-        }
+        // }
         console.warn(form.get("nature"))
         axios.post('http://localhost:8080/api/v1/docFile', form, {
             headers: {

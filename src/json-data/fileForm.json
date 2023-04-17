@@ -60,18 +60,18 @@
             },
             "provider": {
                 "selectedValue": {
-                    "value": "electronic",
+                    "value": "1",
                     "label": "Electronic"
                 },
                 "label": "test",
                 "url": "",
                 "options": [
                     {
-                        "value": "electronic",
+                        "value": "1",
                         "label": "Electronic"
                     },
                     {
-                        "value": "physical",
+                        "value": "2",
                         "label": "Physical"
                     }
                 ],
@@ -108,18 +108,18 @@
             },
             "provider": {
                 "selectedValue": {
-                    "value": "NON-SFS",
+                    "value": "1",
                     "label": "NON-SFS"
                 },
                 "label": "test",
                 "url": "",
                 "options": [
                     {
-                        "value": "NON-SFS",
+                        "value": "1",
                         "label": "NON-SFS"
                     },
                     {
-                        "value": "physical",
+                        "value": "2",
                         "label": "Physical"
                     }
                 ],
@@ -157,161 +157,7 @@
                 "minLength": ""
             }
         },
-        {
-            "type": "select",
-            "id": "basicHead",
-            "name": "basicHead",
-            "label": "Basic Head",
-            "classes": "",
-            "placeholder": "",
-            "suggestion": "",
-            "config": {
-                "disabled": false,
-                "readOnly": false,
-                "checked": false,
-                "hidden": false
-            },
-            "provider": {
-                "selectedValue": {
-                    "label": "",
-                    "value": ""
-                },
-                "label": "test",
-                "url": "http://localhost:8080/api/v1/jetprocess/basichead",
-                "value": "",
-                "options": [],
-                "hidden": false
-            },
-            "value": "",
-            "htmlElement": "text",
-            "valid": false,
-            "validation": {
-                "required": false,
-                "maxLength": "",
-                "minLength": ""
-            },
-            "errorMessage": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            }
-        },
-        {
-            "type": "select",
-            "id": "primaryHead",
-            "name": "primaryHead",
-            "label": "Primary Head",
-            "classes": "",
-            "placeholder": "",
-            "suggestion": "",
-            "config": {
-                "disabled": false,
-                "readOnly": false,
-                "checked": false,
-                "hidden": false
-            },
-            "provider": {
-                "selectedValue": {
-                    "label": "",
-                    "value": ""
-                },
-                "label": "test",
-                "url": "http://localhost:8080/api/v1/jetprocess/primaryhead/1",
-                "options": [],
-                "value": "",
-                "hidden": false
-            },
-            "value": "",
-            "htmlElement": "text",
-            "valid": false,
-            "validation": {
-                "required": false,
-                "maxLength": "",
-                "minLength": ""
-            },
-            "errorMessage": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            }
-        },
-        {
-            "type": "select",
-            "id": "secondaryHead",
-            "name": "secondaryHead",
-            "label": "Secondary Head",
-            "classes": "",
-            "placeholder": "",
-            "suggestion": "",
-            "config": {
-                "disabled": false,
-                "readOnly": false,
-                "checked": false,
-                "hidden": false
-            },
-            "provider": {
-                "selectedValue": {
-                    "label": "",
-                    "value": ""
-                },
-                "label": "test",
-                "url": "http://localhost:8080/api/v1/jetprocess/secondaryhead/1",
-                "data": [],
-                "value": "",
-                "hidden": false
-            },
-            "value": "",
-            "htmlElement": "text",
-            "valid": false,
-            "validation": {
-                "required": false,
-                "maxLength": "",
-                "minLength": ""
-            },
-            "errorMessage": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            }
-        },
-        {
-            "type": "select",
-            "id": "tertiaryHead",
-            "name": "tertiaryHead",
-            "label": "Tertiary Head",
-            "classes": "",
-            "placeholder": "",
-            "suggestion": "",
-            "config": {
-                "disabled": false,
-                "readOnly": false,
-                "checked": false,
-                "hidden": false
-            },
-            "provider": {
-                "selectedValue": {
-                    "label": "",
-                    "value": ""
-                },
-                "url": "http://localhost:8080/api/v1/jetprocess/tertiaryhead/1",
-                "options": [],
-                "value": "",
-                "hidden": false
-            },
-            "value": "",
-            "htmlElement": "text",
-            "valid": false,
-            "validation": {
-                "required": false,
-                "maxLength": "",
-                "minLength": ""
-            },
-            "errorMessage": {
-                "required": true,
-                "maxLength": "1",
-                "minLength": ""
-            }
-        },
+       
         {
             "type": "text",
             "id": "year",
@@ -417,76 +263,7 @@
                 "minLength": ""
             }
         },
-        {
-            "type": "select",
-            "id": "categoryId",
-            "name": "categoryId",
-            "label": "Category",
-            "classes": "",
-            "placeholder": "Enter your categoryId",
-            "suggestion": "",
-            "config": {
-                "disabled": false,
-                "readOnly": false,
-                "checked": false,
-                "hidden": false
-            },
-            "provider": {
-                "id": "test",
-                "url": "http://jsonplaceholder.typicode.com/posts/1/comments",
-                "options": [],
-                "value": "",
-                "hidden": false
-            },
-            "value": "",
-            "htmlElement": "reference",
-            "valid": false,
-            "validation": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            },
-            "errorMessage": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            }
-        },
-        {
-            "type": "select",
-            "id": "subCategoryId",
-            "name": "subCategoryId",
-            "label": "Sub Category",
-            "classes": "",
-            "placeholder": "Enter your Sub categoryId",
-            "suggestion": "",
-            "config": {
-                "disabled": false,
-                "readOnly": false,
-                "checked": false,
-                "hidden": false
-            },
-            "provider": {
-                "id": "test",
-                "url": "http://jsonplaceholder.typicode.com/posts/1/comments",
-                "options": [],
-                "value": "",
-                "hidden": false
-            },
-            "value": "",
-            "htmlElement": "reference",
-            "valid": false,
-            "validation": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            },
-            "errorMessage": {
-                "required": true,
-                "maxLength": "",
-                "minLength": ""
-            }
-        },
+ 
         {
             "type": "text",
             "id": "userPostId",

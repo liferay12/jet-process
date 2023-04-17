@@ -26,9 +26,11 @@ const Renderer = (props) => {
         setFieldArray(prev => prev.map((item, idx) => {
             if (index === idx) {
                 if (field.type === 'select') {
+                    console.log("select*******")
+                    console.log(event.value)
                     item.value = event.value;
-                    
-                    fieldData[event.name] = event.value;
+                    fieldData[field.name] = event.value;
+                    // fieldData[event.name] = event.value;
                 } else if (field.type === "tel") {
                     item.value = event;
                     fieldData[event.target.name] = event;
@@ -51,11 +53,11 @@ const Renderer = (props) => {
                 });
             });
         }
-        else {
-            fieldArray.map((fItem, index) => {
-                fItem.value = "";
-            });
-        }
+        // else {
+        //     fieldArray.map((fItem, index) => {
+        //         fItem.value = "";
+        //     });
+        // }
         return fieldArray;
     }
 
