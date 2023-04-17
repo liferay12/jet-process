@@ -13,7 +13,7 @@ const Form = (props) => {
         var form = new FormData();
         fieldArray.map((item, index) => {
             console.log('item..****.... ', item.value)
-            console.log(item.name,"---",item.value)
+            console.info("---",item.value)
             if (item.value != "") {
                 console.info(item.value)
                 form.append(item.name, item.value);
