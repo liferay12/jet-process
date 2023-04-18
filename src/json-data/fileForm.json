@@ -9,7 +9,7 @@
             "name": "save",
             "label": "",
             "value": "Save",
-            "url": "http://localhost:8081/api/v1/user"
+            "url": "http://localhost:8080/api/v1/docFile"
         },
         {
             "type": "GET",
@@ -17,7 +17,15 @@
             "name": "get",
             "label": "",
             "value": "Get",
-            "url": "http://localhost:8081/api/v1/user"
+            "url": "http://localhost:8080/api/v1/docFile"
+        },
+        {
+            "type": "PUT",
+            "id": "update",
+            "name": "update",
+            "label": "",
+            "value": "update",
+            "url": "http://localhost:8080/api/v1/docFile"
         }
     ],
     "actions": [

@@ -29,7 +29,7 @@ const Select = (props) => {
         let data1 = [];
         console.log(data)
         data.data.map((item) => {
-            let id = item.code;
+            let id = item.id;
             let value = item.name;
             let obj = { value: id, label: value };
             data1.push(obj);

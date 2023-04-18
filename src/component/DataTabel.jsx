@@ -36,7 +36,7 @@ export const DataTabel = (props) => {
             }
         });
         let cells = [];
-        let tAction=[];
+        let tAction = [];
         props.formJSON.actions.map((action, index) => {
             if (action.applyto === "row") {
                 let act = {
@@ -46,7 +46,7 @@ export const DataTabel = (props) => {
                     class: action.classes
                 }
                 cells.push(act);
-            }else if(action.applyto === "table"){
+            } else if (action.applyto === "table") {
                 let tableAction = {
                     name: action.name,
                     label: action.label,
@@ -71,7 +71,7 @@ export const DataTabel = (props) => {
                                 {item.cell.map((i) => {
                                     return (
                                         <>
-                                            <li onClick={() => (handleShow(i.name, row.userId))}><div className={i.class} >&nbsp; &nbsp;<i class={i.icon} aria-hidden="true"></i>&nbsp; {i.label}</div></li>
+                                            <li onClick={() => (handleShow(i.name, row.id))}><div className={i.class} >&nbsp; &nbsp;<i class={i.icon} aria-hidden="true"></i>&nbsp; {i.label}</div></li>
                                         </>
                                     )
                                 })
@@ -84,9 +84,9 @@ export const DataTabel = (props) => {
             }
             // else if (item.name === "table"){
             //     {item.cell.map((i) => {
-                    
+
             //             let button=    <button onClick={handleClick} className={i.class}><i class={i.icon} aria-hidden="true"></i> {i.label}</button>
-                              
+
             //     })
             //     }
             // }
@@ -100,12 +100,12 @@ export const DataTabel = (props) => {
     // Check Actions to render component in to the modal
     let modalContent;
     if (events === "edit") {
-        modalContent = <File data={editrow}></File>;
+        modalContent = <File data={editrow} ></File>;
     } else if (events === "delete") {
         modalContent = <Delete data={editrow} url={props.url}></Delete>;
     }
     else if (events === "add") {
-        modalContent = <File></File>;
+        modalContent = <File data={''}></File>;
     }
     else {
         modalContent = <h1 className='text-danger'>Import Component to render in modal</h1>;

@@ -22,6 +22,7 @@ const TextArea=(props)=>{
                     minLength={props.fieldConfig.validation.minLength}
                     autocomplete={props.fieldConfig.validation.autocomplete}
                     autofocus={props.fieldConfig.validation.autofocus}
+                    value={props.fieldConfig.value}
             />
         </div>
     );

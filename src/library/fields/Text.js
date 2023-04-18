@@ -25,6 +25,7 @@ const Text = (props) => {
     return (
         <div className='form-group mt-3'>
             <label htmlFor={props.fieldConfig.id}>{props.fieldConfig.label}</label>
+            
             <input
 
                 //aria-describedby={(props.fieldConfig.id)+Feedback}
