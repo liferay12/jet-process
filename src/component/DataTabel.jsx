@@ -105,7 +105,7 @@ export const DataTabel = (props) => {
         modalContent = <Delete data={editrow} url={props.url}></Delete>;
     }
     else if (events === "add") {
-        modalContent = <UserRegistration></UserRegistration>;
+        modalContent = <File></File>;
     }
     else {
         modalContent = <h1 className='text-danger'>Import Component to render in modal</h1>;

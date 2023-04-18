@@ -13,7 +13,7 @@ const Form = (props) => {
         var form = new FormData();
         fieldArray.map((item, index) => {
             console.log('item..****.... ', item.value)
-            console.log(item.name,"---",item.value)
+            console.log(item.name, "---", item.value)
             if (item.value != "") {
                 console.info(item.value)
                 form.append(item.name, item.value);
@@ -46,11 +46,16 @@ const Form = (props) => {
             <form onSubmit={(event) => { submit(event) }}>
                 <Renderer fieldArray={fieldArray} fieldData={props.editData} setFieldArray={setFieldArray} />
                 <div className='text-center m-3 mb-2'>
+                    {console.log("$$$$$$$$$$$")}
+
                     {
                         formObject.actions.map((item, index) =>
                             <>
 
-                                <button key={`${item.id}+${index}`} type={`${item.type}`} id={item.id} className={`${item.classes}`}>{item.label}</button>
+                                {
+                                    item.applyto === "form" ? (<button key={`${item.id}+${index}`} type={`${item.type}`} id={item.id} className={`${item.classes}`}>{item.label}</button>) : ""
+                                }
+
                             </>
                         )
                     }
