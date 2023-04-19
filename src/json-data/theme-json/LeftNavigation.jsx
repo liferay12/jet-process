@@ -5,6 +5,7 @@ import { RoleList } from "../../component/RoleList";
 import { UserList } from "../../component/UserList";
 import { File } from "../../component/File";
 import { FileList } from "../../component/FileList";
+import { UploadPreview } from "../../component/UploadPreview";
 
 const section = [
   {
@@ -69,7 +70,7 @@ const section = [
             icon: "",
             name: "Inbox",
             path: "/file_inbox",
-            subComponent: Test
+            subComponent: UploadPreview
           },
           {
             icon: "",
