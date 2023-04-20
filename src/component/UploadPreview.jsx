@@ -54,7 +54,7 @@ export const UploadPreview = () => {
   return (
     <form>
       <Container className="" >
-        <div onDrop={onDrag} className="border-primary" style={{ width: "50%", height: "30%", margin: "0% 25%" }} >
+        <div onDrop={onDrag} className="border" style={{ width: "50%", height: "30%", margin: "0% 25%" }} >
 
           {
             flag ? <div className="" style={{ position: "relative", width: "100%" }}>< button type="button" className="btn btn-primary" value={a} onClick={(e) => { onBtnClick(e) }}>upload</button> <p>Please select pdf file to upload</p></div> : <button type="button" onClick={() => { resetUpload() }}>clear</button>
