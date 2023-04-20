@@ -87,9 +87,10 @@
             "name": "nature",
             "label": "Nature",
             "classes": "",
+            "elementInRow": 1,
             "placeholder": "Enter your nature",
             "suggestion": "",
-            "listColumn": true,
+            "listtable": true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -136,9 +137,10 @@
             "name": "type",
             "label": "type",
             "classes": "",
+            "elementInRow": 2,
             "placeholder": "Enter your type",
             "suggestion": "",
-            "listColumn": false,
+            "listtable": false,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -203,8 +205,9 @@
             "label": "Year",
             "classes": "col-md-6 form-control",
             "placeholder": "",
+            "elementInRow": 2,
             "suggestion": "",
-            "listColumn": false,
+            "listtable": false,
             "config": {
                 "disabled": false,
                 "readOnly": true,
@@ -240,7 +243,7 @@
             "classes": "col-md-6 form-control",
             "placeholder": "File-Code",
             "suggestion": "",
-            "listColumn": true,
+            "listtable": true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -276,7 +279,7 @@
             "classes": "col-md-6 form-control",
             "placeholder": "Enter your subject",
             "suggestion": "",
-            "listColumn": true,
+            "listtable": true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -312,7 +315,7 @@
             "classes": "col-md-6  form-control",
             "placeholder": "Enter your userPostId",
             "suggestion": "",
-            "listColumn": true,
+            "listtable": true,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -348,7 +351,7 @@
             "classes": "col-md-6  form-control",
             "placeholder": "Enter your remarks",
             "suggestion": "",
-            "listColumn": false,
+            "listtable": false,
             "config": {
                 "disabled": false,
                 "readOnly": false,
@@ -384,7 +387,7 @@
             "classes": "col-md-6  form-control",
             "placeholder": "Enter reference",
             "suggestion": "",
-            "listColumn": false,
+            "listtable": false,
             "config": {
                 "disabled": false,
                 "readOnly": false,

@@ -90,9 +90,12 @@ const Renderer = (props) => {
         <div className='mt-3'>
 
             {
+
                 fieldArray.map((field, index) => (
                     <div key={`${field.id}_${index}`}>
-                        {setField(field, index)}
+                        <div className={`col-md-${12 / field.elementInRow} col-sm-${field.elementInRow}`}>
+                            {setField(field, index)}
+                        </div>
                     </div>
                 ))
             }
