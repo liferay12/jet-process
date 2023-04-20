@@ -8,9 +8,10 @@ import UserRegistration from './UserRegistration';
 //import columns from '../json-data/DataTableColumns.json';
 import { Delete } from './Delete';
 import { File } from './File';
+import { ReactDataTable } from './ReactDataTable';
 
 
-export const DataTabel = (props) => {
+export const FileTabel = (props) => {
     const [show, setShow] = useState(false);
     const [column, setColumn] = useState([]);
     const [editrow, setEditrow] = useState();
@@ -134,7 +135,8 @@ export const DataTabel = (props) => {
 
     return (
         <>
-            <DataTable
+            <ReactDataTable></ReactDataTable>
+            {/* <DataTable
                 title={props.formJSON.title}
                 columns={column}
                 data={props.data}
@@ -162,7 +164,7 @@ export const DataTabel = (props) => {
 
                     />}
                 subHeaderAlign="left"
-            />
+            /> */}
 
             <Modal
                 show={show}

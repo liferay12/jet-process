@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { DataTabel } from "./DataTabel";
+import { createContext, useEffect, useState } from "react";
+import { FileTabel } from "./FileTabel";
 import axios from "axios";
 import fileFormJSOn from "../json-data/fileForm.json";
-
-export const FileList=()=>{
+export const FileContext = createContext();
+export const FileList = () => {
     const [fileList, setFileList] = useState([]);
     const [search, setSearch] = useState("");
     const [FilterFileList, setFilterFileList] = useState([]);
@@ -21,10 +21,13 @@ export const FileList=()=>{
         })
         setFilterFileList(result);
     }, [search]);
-    return(
+    FileContext={data:{}, formJSON:{}, setSearch:{}};
+    return (
         <>
-            <DataTabel formJSON={fileFormJSOn} data={fileList} setSearch={setSearch} url={'http://localhost:8080/api/v1/docFile'}></DataTabel> 
-            {/* localhost:8080/api/v1/user */}
+            <FileContext.Provider data={fileList} formJSON={fileFormJSOn} setSearch={setSearch}>
+                <FileTabel  url={'http://localhost:8080/api/v1/docFile'}></FileTabel>
+                {/* localhost:8080/api/v1/user */}
+            </FileContext.Provider>
         </>
     )
 }

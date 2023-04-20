@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import fileFormJSOn from "../json-data/fileForm.json";
 import Form from '../library/renderer/FormRenderer';
-import { DataTabel } from './DataTabel';
+import { DataTabel } from './FileTabel';
 import axios from "axios"
 export const File = (props) => {
     let putURL = "";

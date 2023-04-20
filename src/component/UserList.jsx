@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { DataTabel } from "./DataTabel";
 import userRegistrationForm from "../json-data/UserRegistration.json"
+import { ReactDataTable } from "./ReactDataTable";
 
 export const UserList = () => {
 
@@ -24,7 +24,7 @@ export const UserList = () => {
     }, [search]);
     return (
         <>
-            <DataTabel formJSON={userRegistrationForm} data={FilterUsers} setSearch={setSearch} url={'localhost:8080/api/v1/user'}></DataTabel>
+            <ReactDataTable formJSON={userRegistrationForm} data={FilterUsers} setSearch={setSearch} url={'localhost:8080/api/v1/user'}></ReactDataTable>
         </>
     )
 
