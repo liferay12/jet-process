@@ -6,17 +6,27 @@ import axios from "axios"
 export const File = (props) => {
     let putURL = "";
     const [docFile, setDocFile] = useState({});
+    const [url, setURL] = useState();
+    const [requestType, setRequestType] = useState()
     useEffect(() => {
-        let url = "";
+
         fileFormJSOn.urls.map((urlConfig) => {
             if (urlConfig.type === "POST") {
-
-                url = urlConfig.url;
+                setRequestType(urlConfig.type)
+                setURL(urlConfig.url);
             }
+
         })
         console.log("???????????");
         console.log(url)
         if (props.data != 0 && props.data != undefined) {
+            fileFormJSOn.urls.map((urlConfig) => {
+                if (urlConfig.type === "PUT") {
+                    setRequestType(urlConfig.type)
+                    setURL(urlConfig.url)
+                }
+
+            })
             fetchDocFile(url, 52);
         }
     }, [])
@@ -31,7 +41,8 @@ export const File = (props) => {
         <div className='Home'>
             <div className='row'>
                 <div className='col-md-6 offset-md-3 card'>
-                    <Form formObject={fileFormJSOn} editData={docFile} />
+                    {alert(requestType)}
+                    <Form formObject={fileFormJSOn} editData={docFile} url={url} requestType={requestType} />
                 </div>
                 {/* <DataTabel data={FilterUsers} setSearch={setSearch} url={""}></DataTabel> */}
             </div>

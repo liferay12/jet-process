@@ -26,7 +26,7 @@ export const DataTabel = (props) => {
     useEffect(() => {
         let newColumn = [];
         props.formJSON.fields.map((field, index) => {
-            if (field.listColumn) {
+            if (field.listtable) {
                 let obj = {
                     name: field.name,
                     selector: field.id,

@@ -27,8 +27,8 @@ const Form = (props) => {
 
 
         console.warn(form.get("nature"))
-        if (methodType === "POST") {
-            axios.post(requestType, form, {
+        if (props.requestType === "POST") {
+            axios.post(props.url, form, {
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -41,9 +41,9 @@ const Form = (props) => {
             })
         }
 
-        if (methodType === "PUT") {
+        if (props.requestType === "PUT") {
 
-            axios.put(requestType, form, {
+            axios.put(props.url, form, {
                 headers: {
                     "Content-Type": "application/json"
                 }
