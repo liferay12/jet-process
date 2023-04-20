@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react";
+import { Container } from "react-bootstrap";
 // Import the dropzone component
 import { useDropzone } from "react-dropzone";
 
@@ -31,12 +32,13 @@ export const UploadPreview = () => {
 
   return (
     <div className="dropzone-div"  >
-      <input className="dropzone-input" type="file" onChange={(e) => { op(e) }} />
-      <hr></hr>
-      <div className="border" onDragEnter={onDrag} onDragLeave={onDrag} onDragOver={onDrag} onDrop={onDrag} style={{ "width": "200px", "height": "200px" }}></div>
-      <hr></hr>
-      <embed src={a} type="application/pdf" width="400px" height="400px">
-      </embed>
+      <Container>
+        <div className="border"  onDrop={onDrag} style={{ width: "50%", height: "30%",margin:"0% 25%"}}>
+          <input className="dropzone-input"  type="file" style={{position:"absolute", paddingTop:"10%", left:"50%"}} onChange={(e) => { op(e) }} />
+          <embed src={a} type="application/pdf" width="100%" height="400px">
+          </embed>
+        </div>
+      </Container>
     </div>
   );
 }
