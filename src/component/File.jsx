@@ -39,7 +39,7 @@ export const File = (props) => {
     return (
         <div className='Home'>
             <div className='row'>
-                <div className='col-md-6 offset-md-3 card'>
+                <div className='col-md-12 card'>
                     {console.log("!!!!!!!!!!!##########", requestType, " ---- ", url)}
                     <Form formObject={fileFormJSOn} editData={docFile} url={url} requestType={requestType} />
                 </div>
