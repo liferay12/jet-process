@@ -26,15 +26,18 @@ export const FileTabel = (props) => {
 
     useEffect(() => {
         let newColumn = [];
-        props.formJSON.fields.map((field, index) => {
-            if (field.listtable) {
-                let obj = {
-                    name: field.name,
-                    selector: field.id,
-                    sortable: true
+        props.formJSON.fields.map((iteam, index) => {
+            iteam.fieldGroup.map((field)=>{
+                if (field.listtable) {
+                    let obj = {
+                        name: field.name,
+                        selector: field.id,
+                        sortable: true
+                    }
+                    newColumn.push(obj)
                 }
-                newColumn.push(obj)
-            }
+            })
+            
         });
         let cells = [];
         let tAction = [];
@@ -135,7 +138,9 @@ export const FileTabel = (props) => {
 
     return (
         <>
-            <ReactDataTable></ReactDataTable>
+            {console.log("-----8-8-8-8-8---------")}
+            {console.log(column)}
+            <ReactDataTable filecolumn={column}></ReactDataTable>
             {/* <DataTable
                 title={props.formJSON.title}
                 columns={column}

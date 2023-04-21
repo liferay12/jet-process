@@ -32,7 +32,7 @@ const ThemeRender = (props) => {//
     }
 
   }
-  console.log("======" + props.sideBarJSON);
+  // console.log("======" + props.sideBarJSON);
   return (
     <>
 

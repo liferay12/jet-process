@@ -206,7 +206,7 @@
         {
             "id": "",
             "title": "",
-            "noOfColInRow": 4,
+            "noOfColInRow": 3,
             "fieldGroup": [
                 {
                     "type": "select",
