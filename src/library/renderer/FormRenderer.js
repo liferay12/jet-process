@@ -28,6 +28,7 @@ const Form = (props) => {
 
         console.warn(form.get("nature"))
         if (props.requestType === "POST") {
+            console.log(">>>>>>>>>",props.requestType)
             axios.post(props.url, form, {
                 headers: {
                     "Content-Type": "application/json"
@@ -42,7 +43,7 @@ const Form = (props) => {
         }
 
         if (props.requestType === "PUT") {
-
+            console.log("<<<<<<<<<<<<",props.requestType)
             axios.put(props.url, form, {
                 headers: {
                     "Content-Type": "application/json"
@@ -88,6 +89,7 @@ const Form = (props) => {
         <div className='container Form'>
             <h3 className='text-center'>{props.formObject.title}</h3>
             <form onSubmit={(event) => { submit(event) }}>
+                {console.log("///////",fieldArray[0].title)}
                 <Renderer fieldArray={fieldArray} fieldData={props.editData} setFieldArray={setFieldArray} />
                 <div className='text-center m-3 mb-2'>
                     {console.log("$$$$$$$$$$$")}

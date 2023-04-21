@@ -17,7 +17,6 @@ export const File = (props) => {
             }
 
         })
-        console.log("???????????");
         console.log(url)
         if (props.data != 0 && props.data != undefined) {
             fileFormJSOn.urls.map((urlConfig) => {
@@ -41,7 +40,7 @@ export const File = (props) => {
         <div className='Home'>
             <div className='row'>
                 <div className='col-md-6 offset-md-3 card'>
-                    {alert(requestType)}
+                    {console.log("!!!!!!!!!!!##########", requestType, " ---- ", url)}
                     <Form formObject={fileFormJSOn} editData={docFile} url={url} requestType={requestType} />
                 </div>
                 {/* <DataTabel data={FilterUsers} setSearch={setSearch} url={""}></DataTabel> */}

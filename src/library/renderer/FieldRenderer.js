@@ -91,12 +91,25 @@ const Renderer = (props) => {
 
             {
 
-                fieldArray.map((field, index) => (
-                    <div key={`${field.id}_${index}`}>
-                        <div className={`col-md-${12 / field.elementInRow} col-sm-${field.elementInRow}`}>
-                            {setField(field, index)}
+                fieldArray.map((group, index) => (
+                    <>
+                        <div className='row'>
+
+
+                            {
+                                group.fieldGroup.map((field, index) =>
+                                    
+                                       
+                                            <div className={`col-md-${12 / group.noOfColInRow} col-sm-${group.noOfColInRow}`}>
+                                                {console.log("^^^^^^^^"+field.type)}
+                                                {setField(field, index)}
+                                            </div>
+                                        
+                                    
+                                )
+                            }
                         </div>
-                    </div>
+                    </>
                 ))
             }
         </div>
