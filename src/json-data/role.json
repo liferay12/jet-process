@@ -1,7 +1,7 @@
 {
     "id": "role",
     "title": "Add Role",
-    "subTitle": "",
+    "subTitle": "", 
     "fields": [
         {
             "type": "text",

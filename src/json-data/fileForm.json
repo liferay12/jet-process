@@ -30,14 +30,7 @@
     ],
     "actions": [
         {
-            "classes": "btn btn-sm btn-primary ms-3",
-            "name": "update",
-            "type": "submit",
-            "label": "Update",
-            "applyto": "form"
-        },
-        {
-            "classes": "btn btn-sm btn-success ms-3",
+            "classes": "btn btn-success ms-3",
             "name": "save",
             "type": "submit",
             "label": "Save",
@@ -48,11 +41,11 @@
             "label": "Add File",
             "icon": "",
             "type": "submit",
-            "classes": "btn btn-sm btn-primary ms-3",
+            "classes": "btn btn-primary ms-3",
             "applyto": "table"
         },
         {
-            "classes": "btn btn-sm btn-danger ms-3",
+            "classes": "btn btn-danger ms-3",
             "name": "cancel",
             "type": "reset",
             "label": "Cancel",
@@ -62,21 +55,14 @@
             "name": "edit",
             "label": "Edit",
             "icon": "fa fa-pencil",
-            "classes": "btn",
+            "classes": "btn btn-sm btn-primary ms-2 p-2",
             "applyto": "row"
         },
         {
             "name": "delete",
             "label": "Delete",
             "icon": "fa fa-trash",
-            "classes": "btn",
-            "applyto": "row"
-        },
-        {
-            "name": "update",
-            "label": "Update",
-            "icon": "fa fa-cloud-upload",
-            "classes": "btn",
+            "classes": "btn btn-primary ms-2 p-2",
             "applyto": "row"
         }
     ],
@@ -86,6 +72,55 @@
             "title": "",
             "noOfColInRow": 2,
             "fieldGroup": [
+                {
+                    "type": "hidden",
+                    "id": "id",
+                    "name": "id",
+                    "label": "id",
+                    "classes": "",
+                    "placeholder": "Enter your nature",
+                    "suggestion": "",
+                    "listtable": false,
+                    "config": {
+                        "disabled": false,
+                        "readOnly": false,
+                        "checked": false,
+                        "hidden": false
+                    },
+                    "provider": {
+                        "selectedValue": {
+                            "value": "1",
+                            "label": "Electronic"
+                        },
+                        "label": "test",
+                        "url": "",
+                        "options": [
+                            {
+                                "value": "1",
+                                "label": "Electronic"
+                            },
+                            {
+                                "value": "2",
+                                "label": "Physical"
+                            }
+                        ],
+                        "value": "",
+                        "hidden": false
+                    },
+                    "value": "",
+                    "htmlElement": "text",
+                    "valid": false,
+                    "validation": {
+                        "required": false,
+                        "maxLength": "",
+                        "minLength": ""
+                    },
+                    "errorMessage": {
+                        "required": true,
+                        "maxLength": "",
+                        "minLength": ""
+                    }
+                },
                 {
                     "type": "select",
                     "id": "nature",
@@ -143,7 +178,7 @@
                     "classes": "",
                     "placeholder": "Enter your type",
                     "suggestion": "",
-                    "listtable": false,
+                    "listtable": true,
                     "config": {
                         "disabled": false,
                         "readOnly": false,
@@ -206,7 +241,7 @@
         {
             "id": "",
             "title": "",
-            "noOfColInRow": 4,
+            "noOfColInRow": 6,
             "fieldGroup": [
                 {
                     "type": "select",
@@ -216,7 +251,7 @@
                     "classes": "",
                     "placeholder": "",
                     "suggestion": "",
-                    "listtable": true,
+                    "listtable": false,
                     "config": {
                         "disabled": false,
                         "readOnly": false,
@@ -229,17 +264,8 @@
                             "label": ""
                         },
                         "label": "test",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "1",
-                                "label": "Electronic"
-                            },
-                            {
-                                "value": "2",
-                                "label": "Physical"
-                            }
-                        ],
+                        "url": "http://localhost:8080/api/v1/jetprocess/basichead",
+                        "options": [],
                         "value": "",
                         "hidden": false
                     },
@@ -274,21 +300,12 @@
                     },
                     "provider": {
                         "selectedValue": {
-                            "value": "1",
-                            "label": "NON-SFS"
+                            "value": "",
+                            "label": ""
                         },
                         "label": "test",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "1",
-                                "label": "NON-SFS"
-                            },
-                            {
-                                "value": "2",
-                                "label": "Physical"
-                            }
-                        ],
+                        "url": "http://localhost:8080/api/v1/jetprocess/primaryhead/1",
+                        "options": [],
                         "value": "",
                         "hidden": false
                     },
@@ -331,7 +348,7 @@
                     "classes": "",
                     "placeholder": "",
                     "suggestion": "",
-                    "listtable": true,
+                    "listtable": false,
                     "config": {
                         "disabled": false,
                         "readOnly": false,
@@ -340,11 +357,11 @@
                     },
                     "provider": {
                         "selectedValue": {
-                            "value": "1",
+                            "value": "",
                             "label": ""
                         },
                         "label": "test",
-                        "url": "",
+                        "url": "http://localhost:8080/api/v1/jetprocess/secondaryhead/1",
                         "options": [
                             {
                                 "value": "1",
@@ -389,21 +406,12 @@
                     },
                     "provider": {
                         "selectedValue": {
-                            "value": "1",
-                            "label": "NON-SFS"
+                            "value": "",
+                            "label": ""
                         },
-                        "label": "test",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "1",
-                                "label": "NON-SFS"
-                            },
-                            {
-                                "value": "2",
-                                "label": "Physical"
-                            }
-                        ],
+                        "label": "",
+                        "url": "http://localhost:8080/api/v1/jetprocess/tertiaryhead/1",
+                        "options": [],
                         "value": "",
                         "hidden": false
                     },
@@ -440,6 +448,63 @@
                 },
                 {
                     "type": "number",
+                    "id": "fileCode",
+                    "name": "fileCode",
+                    "label": "File Code",
+                    "classes": "form-control",
+                    "placeholder": "",
+                    "suggestion": "",
+                    "listtable": false,
+                    "config": {
+                        "disabled": false,
+                        "readOnly": false,
+                        "checked": false,
+                        "hidden": false
+                    },
+                    "provider": {
+                        "selectedValue": {
+                            "value": "",
+                            "label": ""
+                        },
+                        "label": "",
+                        "url": "",
+                        "options": [],
+                        "value": "",
+                        "hidden": false
+                    },
+                    "radioOptions": [
+                        {
+                            "id": "male",
+                            "label": "Male",
+                            "value": "MALE"
+                        },
+                        {
+                            "id": "female",
+                            "label": "Female",
+                            "value": "FEMALE"
+                        },
+                        {
+                            "id": "other",
+                            "label": "Other",
+                            "value": "OTHER"
+                        }
+                    ],
+                    "value": "",
+                    "htmlElement": "text",
+                    "valid": false,
+                    "validation": {
+                        "required": true,
+                        "maxLength": "",
+                        "minLength": ""
+                    },
+                    "errorMessage": {
+                        "required": true,
+                        "maxLength": "",
+                        "minLength": ""
+                    }
+                },
+                {
+                    "type": "text",
                     "id": "year",
                     "name": "year",
                     "label": "Year",
@@ -505,7 +570,7 @@
         {
             "id": "",
             "title": "",
-            "noOfColInRow": 2,
+            "noOfColInRow": 1,
             "fieldGroup": [
                 {
                     "type": "text",
@@ -515,7 +580,7 @@
                     "classes": "form-control",
                     "placeholder": "",
                     "suggestion": "",
-                    "listtable": false,
+                    "listtable": true,
                     "config": {
                         "disabled": false,
                         "readOnly": false,
@@ -703,13 +768,13 @@
                 },
                 {
                     "type": "textarea",
-                    "id": "remarks",
-                    "name": "remarks",
-                    "label": "Remarks",
+                    "id": "remark",
+                    "name": "remark",
+                    "label": "Remark",
                     "classes": "form-control",
                     "placeholder": "",
                     "suggestion": "",
-                    "listtable": false,
+                    "listtable": true,
                     "config": {
                         "disabled": false,
                         "readOnly": false,
@@ -771,11 +836,11 @@
                     "type": "text",
                     "id": "reference",
                     "name": "reference",
-                    "label": "Reference",   
+                    "label": "Reference",
                     "classes": "form-control",
                     "placeholder": "",
                     "suggestion": "",
-                    "listtable": false,
+                    "listtable": true,
                     "config": {
                         "disabled": false,
                         "readOnly": false,

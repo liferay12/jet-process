@@ -27,7 +27,6 @@ const Select = (props) => {
             console.error("Anable to fetch data : "+err);
         })
         let data1 = [];
-        console.log(data)
         data.data.map((item) => {
             let id = item.id;
             let value = item.name;

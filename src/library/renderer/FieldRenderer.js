@@ -22,24 +22,28 @@ const Renderer = (props) => {
     const { formObject } = props.fieldData;
     const [fieldArray, setFieldArray] = useState(props.fieldArray);
     const fieldChange = (event, field, index, fieldData) => {
-        console.log(event)
-        setFieldArray(prev => prev.map((item, idx) => {
-            if (index === idx) {
-                if (field.type === 'select') {
-                    console.log("select*******")
-                    console.log(event.value)
-                    item.value = event.value;
-                    fieldData[field.name] = event.value;
-                    // fieldData[event.name] = event.value;
-                } else if (field.type === "tel") {
-                    item.value = event;
-                    fieldData[event.target.name] = event;
-                } else {
-                    item.value = event.target.value;
-                    fieldData[event.target.name] = event.target.value;
+        console.log(field)
+        setFieldArray(prev => prev.map((fGroup, i) => {
+            fGroup.fieldGroup.map((item, idx) => {
+                if (index === i) {
+                    if(i===idx){
+                        if (field.type === 'select') {
+                            console.log(field.type,event.value)    
+                            item.value = event.value;
+                            fieldData[field.name] = event.value;
+                            // fieldData[event.name] = event.value;
+                        } else if (field.type === "tel") {
+                            item.value = event;
+                            fieldData[event.target.name] = event;
+                        } else {
+                            item.value = event.target.value;
+                            fieldData[event.target.name] = event.target.value;
+                        }
+                    }
                 }
-            }
-            return item;
+            })
+
+            return fGroup;
         }));
     }
     const initializeForm = () => {
@@ -53,11 +57,11 @@ const Renderer = (props) => {
                 });
             });
         }
-        // else {
-        //     fieldArray.map((fItem, index) => {
-        //         fItem.value = "";
-        //     });
-        // }
+        else {
+            fieldArray.map((fItem, index) => {
+                fItem.value = "";
+            });
+        }
         return fieldArray;
     }
 
@@ -88,30 +92,31 @@ const Renderer = (props) => {
     initializeForm();
     return (
         <div className='mt-3'>
-
-            {
-
-                fieldArray.map((group, index) => (
-                    <>
-                        <div className='row'>
-
-
-                            {
-                                group.fieldGroup.map((field, index) =>
-                                    
-                                       
-                                            <div className={`col-md-${12 / group.noOfColInRow} col-sm-${group.noOfColInRow}`}>
-                                                {console.log("^^^^^^^^"+field.type)}
+            <div className='row'>
+                {
+                    fieldArray.map((item, index) => {
+                        if(item.type === 'group'){
+                            (
+                                <>
+                                    {
+                                        item.fields.map((field, index) => {
+                                            <div className={`col-md-${12 / item.cols} col-sm-${item.cols}`}>
                                                 {setField(field, index)}
                                             </div>
-                                        
-                                    
-                                )
-                            }
-                        </div>
-                    </>
-                ))
-            }
+                                        })
+                                    }
+                                </>
+                            )
+                        }else{
+                            (
+                                <div className={`col-md-12 col-sm-12`}>
+                                    {setField(item, index)}
+                                </div>
+                            )
+                        }
+                    })
+                }
+            </div>
         </div>
     );
 }
