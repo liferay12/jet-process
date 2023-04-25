@@ -44,27 +44,27 @@ const Form = (props) => {
         }
     }
 
-    useEffect(() => {
-        let isEdit = props.editData;
-        if (props.editData !== "" && props.editData != undefined) {
-            formObject.urls.map((urlConfig) => {
-                if (urlConfig.type === "PUT") {
-                    url = urlConfig.url;
-                    setMethodType(urlConfig.type)
-                    setRequestType(urlConfig.type)
-                }
-            })
-        }
-        if (props.editData === "" && props.editData == undefined) {
-            formObject.urls.map((urlConfig) => {
-                if (urlConfig.type === "POST") {
-                    url = urlConfig.url;
-                    setMethodType(urlConfig.type)
-                    setRequestType(urlConfig.type)
-                }
-            })
-        }
-    }, [])
+    // useEffect(() => {
+    //     let isEdit = props.editData;
+    //     if (props.editData !== "" && props.editData != undefined) {
+    //         formObject.urls.map((urlConfig) => {
+    //             if (urlConfig.type === "PUT") {
+    //                 url = urlConfig.url;
+    //                 setMethodType(urlConfig.type)
+    //                 setRequestType(urlConfig.type)
+    //             }
+    //         })
+    //     }
+    //     if (props.editData === "" && props.editData == undefined) {
+    //         formObject.urls.map((urlConfig) => {
+    //             if (urlConfig.type === "POST") {
+    //                 url = urlConfig.url;
+    //                 setMethodType(urlConfig.type)
+    //                 setRequestType(urlConfig.type)
+    //             }
+    //         })
+    //     }
+    // }, [])
 
 
     return (
@@ -72,20 +72,7 @@ const Form = (props) => {
             <h3 className='text-center'>{props.formObject.title}</h3>
             <form onSubmit={(event) => { submit(event) }}>
                 <Renderer fieldArray={fieldArray} fieldData={props.editData} setFieldArray={setFieldArray} />
-                <div className='text-center m-3 mb-2'>
-                    {
-                        formObject.actions.map((item, index) =>
-                            <>
-                                {
-                                    item.applyto === "form" && item.name === "update" && Object.keys(props.editData).length != 0 ? (<button key={`${item.id}+${index}`} type={`${item.type}`} id={item.id} className={`${item.classes}`}>{item.label}</button>)
-                                        : item.applyto === "form" && item.name === "save" && Object.keys(props.editData).length == 0 ? (<button key={`${item.id}+${index}`} type={`${item.type}`} id={item.id} className={`${item.classes}`}>{item.label}</button>)
-                                            : item.applyto === "form" && item.name === "cancel" ? (<button key={`${item.id}+${index}`} type={`${item.type}`} id={item.id} className={`${item.classes}`}>{item.label}</button>) : ""
-                                }
-
-                            </>
-                        )
-                    }
-                </div>
+                
             </form>
         </div>
     );

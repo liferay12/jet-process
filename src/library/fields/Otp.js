@@ -16,7 +16,7 @@ const Otp = (props) => {
                 type={props.fieldConfig.type}
                 id={props.fieldConfig.id}
                 name={props.fieldConfig.name}
-                className={props.fieldConfig.classes}
+                className={props.fieldConfig.cssClass}
                 isInputNum={props.fieldConfig.isInputNum}
                 numInputs={props.fieldConfig.numInputs}
                 shouldAutoFocus={props.fieldConfig.shouldAutoFocus}

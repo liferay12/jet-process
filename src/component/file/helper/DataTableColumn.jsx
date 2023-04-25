@@ -5,20 +5,35 @@ export default function DataTableColumn(formJSON) {
     // ******************* Adding column   *********************
     let newColumn = [];
     formJSON.fields.map((item, index) => {
-        item.fieldGroup.map((field, key) => {
-            if (field.listtable) {
+        if (item.type === "group") {
+            item.fields.map((field, key) => {
+                if (field.listable && field.listable != undefined) {
+                    let obj = {
+                        name: field.name,
+                        selector: field.id,
+                        sortable: true
+                    }
+                    newColumn.push(obj)
+                }
+            })
+        } else {
+            if (item.listable && item.listable != undefined) {
                 let obj = {
-                    name: field.name,
-                    selector: field.id,
+                    name: item.name,
+                    selector: item.id,
                     sortable: true
                 }
                 newColumn.push(obj)
             }
-        })
+        }
+
+
+
 
     });
 
     // ***************** Adding Action into column  ***********************
+    
     let cells = [];
     let tAction = [];
     formJSON.actions.map((action, index) => {

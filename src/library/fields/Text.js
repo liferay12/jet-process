@@ -32,19 +32,19 @@ const Text = (props) => {
                 id={props.fieldConfig.id}
                 type={props.fieldConfig.type}
                 name={props.fieldConfig.name}
-                className={props.fieldConfig.classes}
+                className={props.fieldConfig.cssClass}
                 placeholder={props.fieldConfig.placeholder}
                 onChange={props.changed}
                 value={props.fieldConfig.value}
-                disabled={props.fieldConfig.config.disabled}
-                readOnly={props.fieldConfig.config.readOnly}
-                hidden={props.fieldConfig.config.hidden}
-                pattern={props.fieldConfig.validation.pattern}
-                required={props.fieldConfig.validation.required}
-                maxLength={props.fieldConfig.validation.maxLength}
-                minLength={props.fieldConfig.validation.minLength}
-                autocomplete={props.fieldConfig.validation.autocomplete}
-                autofocus={props.fieldConfig.validation.autofocus}
+                disabled={props.fieldConfig.disabled}
+                readOnly={props.fieldConfig.readOnly}
+                hidden={props.fieldConfig.hidden}
+                // pattern={props.fieldConfig.validation.pattern}
+                required={props.fieldConfig.required}
+                // maxLength={props.fieldConfig.validation.maxLength}
+                // minLength={props.fieldConfig.validation.minLength}
+                // autocomplete={props.fieldConfig.validation.autocomplete}
+                // autofocus={props.fieldConfig.validation.autofocus}
 
             />
             {/* <div id={(props.fieldConfig.id)+Feedback}  className="invalid-feedback">{errors.name?.props.fieldConfig.errorMessage}</div> */}

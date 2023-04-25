@@ -10,7 +10,7 @@ const TextArea=(props)=>{
                     id={props.fieldConfig.id}
                     type={props.fieldConfig.type}
                     name={props.fieldConfig.name}
-                    className={props.fieldConfig.classes}
+                    className={props.fieldConfig.cssClass}
                     placeholder={props.fieldConfig.placeholder}
                     onChange={props.changed}
                     disabled={props.fieldConfig.config.disabled}

@@ -12,29 +12,35 @@ const Select = (props) => {
     const [val, setVal] = useState({});
     useEffect(() => {
 
-        if (props.fieldConfig.provider.url !== "") {
-            setDefaultValue({ value: props.fieldConfig.provider.value, label: props.fieldConfig.provider.label })
-            getProviderList(props.fieldConfig.provider.url);
-        } else {
-            setProvider(props.fieldConfig.provider.options)
+        if (props.fieldConfig.options !== undefined) {
+            setVal(props.fieldConfig.options);
         }
-        setDefaultValue(a);
+        if (props.fieldConfig.provider !== undefined) {
+
+            getProviderData(props.fieldConfig.provider.url);
+            setVal([])
+        }
+
+        //     if (props.fieldConfig.provider.url !== "") {
+        //         setDefaultValue({ value: props.fieldConfig.provider.value, label: props.fieldConfig.provider.label })
+        //         getProviderList(props.fieldConfig.provider.url);
+        //     } else {
+        //         setProvider(props.fieldConfig.provider.options)
+        //     }
+        //     setDefaultValue(a);
 
     }, [])
 
-    async function getProviderList(url) {
-        let data = await axios.get(url).catch((err) => {
-            console.error("Anable to fetch data : "+err);
+    const getProviderData = (url) => {
+        console.log("url : ", url)
+        let providerData = [];
+        axios.get(url).then((res) => {
+            providerData.push(res.data);
+        }).catch((err) => {
+            console.error("Enable to fetch provider data : ", err);
         })
-        let data1 = [];
-        data.data.map((item) => {
-            let id = item.id;
-            let value = item.name;
-            let obj = { value: id, label: value };
-            data1.push(obj);
-        })
-        setProvider(data1)
-    };
+        return providerData;
+    }
 
 
 
@@ -44,19 +50,19 @@ const Select = (props) => {
             <ReactSelect
                 id={props.fieldConfig.id}
                 name={props.fieldConfig.name}
-                className={props.fieldConfig.classes}
+                className={props.fieldConfig.cssClass}
                 placeholder={props.fieldConfig.placeholder}
                 onChange={props.changed}
-                disabled={props.fieldConfig.config.disabled}
-                readOnly={props.fieldConfig.config.readOnly}
-                hidden={props.fieldConfig.config.hidden}
-                required={props.fieldConfig.validation.required}
-                autocomplete={props.fieldConfig.validation.autocomplete}
-                autofocus={props.fieldConfig.validation.autofocus}
-                options={provider}
-                defaultValue={props.fieldConfig.provider.selectedValue || 'select'}
-            // multiple={props.fieldConfig.multiple}
-            // suggestion={props.fieldConfig.suggestion}
+                disabled={props.fieldConfig.disabled}
+                readOnly={props.fieldConfig.readOnly}
+                hidden={props.fieldConfig.hidden}
+                required={props.fieldConfig.required}
+                autocomplete={props.fieldConfig.autocomplete}
+                autofocus={props.fieldConfig.autofocus}
+                options={val}
+                // defaultValue={props.fieldConfig.provider.selectedValue || 'select'}
+                multiple={props.fieldConfig.multiple}
+                suggestion={props.fieldConfig.suggestion}
             />
         </div>
     );

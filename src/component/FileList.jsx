@@ -2,8 +2,14 @@ import { createContext, useEffect, useState } from "react";
 import { FileTabel } from "./FileTabel";
 import axios from "axios";
 import fileFormJSOn from "../json-data/fileForm.json";
-export const FileContext = createContext();
-export const FileList = () => {
+
+//const FileTitle =   createContext();
+const FileColumn = createContext();
+const FileData = createContext();
+
+const FileList = () => {
+
+
     const [fileList, setFileList] = useState([]);
     const [search, setSearch] = useState("");
     const [FilterFileList, setFilterFileList] = useState([]);
@@ -21,13 +27,20 @@ export const FileList = () => {
         })
         setFilterFileList(result);
     }, [search]);
-    FileContext={data:{}, formJSON:{}, setSearch:{}};
+    // FileContext={data:{}, formJSON:{}, setSearch:{}};
+
     return (
         <>
-            <FileContext.Provider data={fileList} formJSON={fileFormJSOn} setSearch={setSearch}>
+            {/* <FileContext.Provider data={fileList} formJSON={fileFormJSOn} setSearch={setSearch}>
                 <FileTabel  url={'http://localhost:8080/api/v1/docFile'}></FileTabel>
-                {/* localhost:8080/api/v1/user */}
-            </FileContext.Provider>
+            </FileContext.Provider> */}
+            <FileColumn.Provider value={fileFormJSOn}>
+                <FileData.Provider value={fileList}>
+                    <FileTabel formJSON={fileFormJSOn} url={'http://localhost:8080/api/v1/docFile'}></FileTabel>
+                </FileData.Provider>
+            </FileColumn.Provider>
         </>
     )
 }
+export default FileList;
+export { FileColumn, FileData };

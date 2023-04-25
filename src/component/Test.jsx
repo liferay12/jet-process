@@ -17,51 +17,6 @@ export const Test = () => {
     const handleShow = () => setShow(true);
     const [column, setColumn] = useState([]);
     const [data, setData] = useState([]);
-    useEffect(() => {
-        getFileList();
-        setColumn(DataTableColumn(fileFormJSON))
-    }, []);
-
-    const getFileList = async () => {
-        const response = await axios.get('http://localhost:8080/api/v1/docFile').catch((err) => {
-            console.error("Error While Getting file list : ", err);
-        })
-        console.log("Response......");
-        console.log(response.data)
-        setData(response.data);
-    }
-
-
-    useEffect(() => {
-
-        fileFormJSON.urls.map((urlConfig) => {
-            if (urlConfig.type === "POST") {
-                setRequestType(urlConfig.type)
-                setURL(urlConfig.url);
-            }
-
-        })
-        console.log(url)
-        // if (props.data != 0 && props.data != undefined) {
-        //     fileFormJSON.urls.map((urlConfig) => {
-        //         if (urlConfig.type === "PUT") {
-        //             setRequestType(urlConfig.type)
-        //             setURL(urlConfig.url)
-        //         }
-
-        //     })
-        //     fetchDocFile(url, 52);
-        // }
-    }, [])
-
-    async function fetchDocFile(url, id) {
-        putURL = `${url}/${id}`;
-        let data = await axios.get(putURL);
-        let editData = data.data;
-        setDocFile(editData)
-    };
-
-
     return (
         <>
             <div className='contianer'>

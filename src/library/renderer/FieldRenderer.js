@@ -22,28 +22,23 @@ const Renderer = (props) => {
     const { formObject } = props.fieldData;
     const [fieldArray, setFieldArray] = useState(props.fieldArray);
     const fieldChange = (event, field, index, fieldData) => {
-        console.log(field)
-        setFieldArray(prev => prev.map((fGroup, i) => {
-            fGroup.fieldGroup.map((item, idx) => {
-                if (index === i) {
-                    if(i===idx){
-                        if (field.type === 'select') {
-                            console.log(field.type,event.value)    
-                            item.value = event.value;
-                            fieldData[field.name] = event.value;
-                            // fieldData[event.name] = event.value;
-                        } else if (field.type === "tel") {
-                            item.value = event;
-                            fieldData[event.target.name] = event;
-                        } else {
-                            item.value = event.target.value;
-                            fieldData[event.target.name] = event.target.value;
-                        }
-                    }
+        setFieldArray(prev => prev.map((item, idx) => {
+            if (index === idx) {
+                if (field.type === 'select') {
+                    console.log(field.type, event.value)
+                    item.value = event.value;
+                    fieldData[field.name] = event.value;
+                    // fieldData[event.name] = event.value;
+                } else if (field.type === "tel") {
+                    item.value = event;
+                    fieldData[event.target.name] = event;
+                } else {
+                    item.value = event.target.value;
+                    fieldData[event.target.name] = event.target.value;
                 }
-            })
+            }
 
-            return fGroup;
+            return item;
         }));
     }
     const initializeForm = () => {
@@ -67,7 +62,7 @@ const Renderer = (props) => {
 
 
     const setField = (field, index) => {
-        let element = <></>;
+        let element = <></>;    
         switch (field.type) {
             case 'select': element = (<Select key={field.id} fieldConfig={field} changed={(event) => fieldChange(event, field, index, props.fieldData)} />); break;
             case 'text': element = (<Text key={field.id} fieldConfig={field} changed={(event) => fieldChange(event, field, index, props.fieldData)} />); break;
@@ -92,33 +87,31 @@ const Renderer = (props) => {
     initializeForm();
     return (
         <div className='mt-3'>
-            <div className='row'>
-                {
-                    fieldArray.map((item, index) => {
-                        if(item.type === 'group'){
-                            (
+            {
+                fieldArray.map((item, index) =>
+                    <div className='row'>
+                        {
+                            item.type === 'group' ? (<>
+                                {
+                                    item.fields.map((field, idx) => <>
+                                        <div key={`${index}_${idx}`} className={`col-md-${item.cols} col-sm-${item.cols}`}>
+                                            {setField(field, idx)}
+                                        </div>
+                                    </>)
+                                }
+                            </>) : (
                                 <>
-                                    {
-                                        item.fields.map((field, index) => {
-                                            <div className={`col-md-${12 / item.cols} col-sm-${item.cols}`}>
-                                                {setField(field, index)}
-                                            </div>
-                                        })
-                                    }
+                                    {setField(item, index)}
                                 </>
                             )
-                        }else{
-                            (
-                                <div className={`col-md-12 col-sm-12`}>
-                                    {setField(item, index)}
-                                </div>
-                            )
                         }
-                    })
-                }
-            </div>
+                    </div>
+                )
+            }
         </div>
+
     );
 }
 
 export default Renderer;
+

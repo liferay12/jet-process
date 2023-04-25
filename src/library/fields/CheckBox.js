@@ -15,7 +15,7 @@ const CheckBox=(props)=>{
         <div className='form-check mt-3'>
             <input
                     type={props.fieldConfig.type}
-                    className={props.fieldConfig.classes}
+                    className={props.fieldConfig.cssClass}
                     name={props.fieldConfig.name} 
                     id={props.fieldConfig.id}
                     onChange={(e) => {HandleChange(e.target.value) }}
