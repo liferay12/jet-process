@@ -32,7 +32,6 @@ const Select = (props) => {
     }, [])
 
     const getProviderData = (url) => {
-        console.log("url : ", url)
         let providerData = [];
         axios.get(url).then((res) => {
             providerData.push(res.data);

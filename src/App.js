@@ -11,10 +11,30 @@ import topbarJSON from "./json-data/theme-json/TopbarConfig"
 
 import toast, { Toaster } from 'react-hot-toast';
 
+export const settings = {
+  /* [..] Other settings */
+  functionName: 'clickedOnItem'
+  /* , [..] More settings */
+};
+
+
+
 function App() {
   EmailService.email = localStorage.getItem("email");
   EmailService.name = "Ashwani rao";
   const notify = () => toast.success('Here is your toast.');
+
+
+  var fnstring = "func()";
+  var fn = window[fnstring];
+  if (typeof fnstring === "function") {
+    fn("Ashwani");
+  }
+
+  function func(a) {
+    alert(a)
+  }
+
   return (
 
     <>

@@ -7,16 +7,31 @@ import { File } from './File';
 import axios from 'axios'
 import Form from '../library/renderer/FormRenderer';
 import DataTableColumn from './file/helper/DataTableColumn';
+import json from "../json-data/fileForm.json"
+
 export const Test = () => {
+
     let putURL = "";
     const [docFile, setDocFile] = useState({});
+
     const [url, setURL] = useState();
-    const [requestType, setRequestType] = useState()
+    const [requestType, setRequestType] = useState();
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [column, setColumn] = useState([]);
     const [data, setData] = useState([]);
+    const alt = () => {
+        alert("Ashwani");
+
+    }
+
+    useEffect(() => {
+        // let year = document.getElementById("year").value="20223"
+        //  = "2023";
+    }, [])
+
+
     return (
         <>
             <div className='contianer'>
@@ -43,6 +58,7 @@ export const Test = () => {
                             highlightOnHover
                             actions={(
                                 <>
+
                                 </>
                             )}
                             subHeader
@@ -52,26 +68,23 @@ export const Test = () => {
                 </div>
             </div>
 
-
-
-
-
+            <Form formObject={json} editData={docFile} url={url} requestType={requestType} />
 
             <Modal className='modal-xl' show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form formObject={fileFormJSON} editData={docFile} url={url} requestType={requestType} />
+                    <Form formObject={fileFormJSON} editData={docFile} />
                 </Modal.Body>
-                {/* <Modal.Footer>
+                <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
                     <Button variant="primary" onClick={handleClose}>
                         Create File
                     </Button>
-                </Modal.Footer> */}
+                </Modal.Footer>
             </Modal>
 
         </>

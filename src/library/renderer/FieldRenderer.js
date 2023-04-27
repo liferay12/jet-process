@@ -21,22 +21,78 @@ import 'jquery/dist/jquery';
 const Renderer = (props) => {
     const { formObject } = props.fieldData;
     const [fieldArray, setFieldArray] = useState(props.fieldArray);
+
+
+
     const fieldChange = (event, field, index, fieldData) => {
         setFieldArray(prev => prev.map((item, idx) => {
-            if (index === idx) {
-                if (field.type === 'select') {
-                    console.log(field.type, event.value)
-                    item.value = event.value;
-                    fieldData[field.name] = event.value;
-                    // fieldData[event.name] = event.value;
-                } else if (field.type === "tel") {
-                    item.value = event;
-                    fieldData[event.target.name] = event;
-                } else {
-                    item.value = event.target.value;
-                    fieldData[event.target.name] = event.target.value;
+
+            // if(index===idx){
+            //     if (field.type === 'select') {
+            //         console.log(field.name, event.value)
+            //         item.value = event.value;
+            //         fieldData[field.name] = event.value;
+            //         // fieldData[event.name] = event.value;
+            //     } else if (field.type === "tel") {
+            //         item.value = event;
+            //         fieldData[event.target.name] = event;
+            //     } else {
+            //         item.value = event.target.value;
+            //         fieldData[event.target.name] = event.target.value;
+            //     }
+            // }
+
+
+
+            if (item.type === "group") {
+                item.fields.map((fld, ind) => {
+                    console.log("***************", field.name, " : ", fld.name);
+
+                    if (field?.type === 'select' && field?.name === fld.name || event.target?.name === fld.name) {
+                        if (field.type === 'select') {
+                            console.log("group 1....", event.value)
+                            fld.value = event.value;
+                            fieldData[field.name] = event.value;
+                            fieldData[event.name] = event.value;
+                        }
+                        else if (field.type === "tel") {
+                            fld.value = event;
+                            fieldData[event.target.name] = event;
+                        } else {
+                            console.log("group 2....", event.target.value)
+                            fld.value = event.target.value;
+                            fieldData[event.target.name] = event.target.value;
+                        }
+                    }
+                    if (item.fields.length - 1 === ind) {
+                        item.value = item.fields.reduce((p, c) => `${p}${c.value ? `${c.value} ` : ""}`, "")
+                    }
+                })
+            } else {
+
+                if (field?.type === 'select' && field?.name === item.name || event.target?.name === item.name) {
+                    console.log(field.type, ' :  select ')
+                    if (field.type === 'select') {
+                        console.log("******", field.type, event.value)
+                        item.value = event.value;
+                        fieldData[field.name] = event.value;
+                        // fieldData[event.name] = event.value;
+                    } else if (field.type === "tel") {
+                        item.value = event;
+                        fieldData[event.target.name] = event;
+                    } else {
+                        console.log("******", event.target.type, event.target.value)
+                        item.value = event.target.value;
+                        fieldData[event.target.name] = event.target.value;
+                    }
                 }
+
             }
+
+
+
+
+
 
             return item;
         }));
@@ -62,7 +118,7 @@ const Renderer = (props) => {
 
 
     const setField = (field, index) => {
-        let element = <></>;    
+        let element = <></>;
         switch (field.type) {
             case 'select': element = (<Select key={field.id} fieldConfig={field} changed={(event) => fieldChange(event, field, index, props.fieldData)} />); break;
             case 'text': element = (<Text key={field.id} fieldConfig={field} changed={(event) => fieldChange(event, field, index, props.fieldData)} />); break;

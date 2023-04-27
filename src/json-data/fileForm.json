@@ -1,904 +1,267 @@
 {
-    "id": "",
-    "title": "Create File",
-    "subTitle": "",
-    "urls": [
+    "id": "fileForm",
+    "title": "Create file",
+    "subtitle": "New Employee Registration",
+    "namespace": "",
+    "enctype": "multipart/form-data",
+    "fields": [
         {
-            "type": "POST",
-            "id": "save",
-            "name": "save",
-            "label": "",
-            "value": "Save",
-            "url": "http://localhost:8080/api/v1/docFile"
+            "type": "group",
+            "name": "nameGroup",
+            "label": "file type",
+            "cols": 2,
+            "fields": [
+                {
+                    "type": "select",
+                    "name": "nature",
+                    "label": "Nature",
+                    "cssClass": "",
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": "Physical"
+                        },
+                        {
+                            "value": "2",
+                            "label": "Electronic",
+                            "selected": "selected"
+                        }
+                    ],
+                    "required": false
+                },
+                {
+                    "type": "select",
+                    "name": "type",
+                    "label": "Type",
+                    "cssClass": "",
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": "SFS"
+                        },
+                        {
+                            "value": "2",
+                            "label": "NON-SFS",
+                            "selected": "selected"
+                        }
+                    ],
+                    "required": false
+                }
+            ]
         },
         {
-            "type": "GET",
-            "id": "get",
-            "name": "get",
-            "label": "",
-            "value": "Get",
-            "url": "http://localhost:8080/api/v1/docFile"
+            "type": "select",
+            "name": "basicHead",
+            "label": "Basic-Head",
+            "cssClass": "",
+            "options": [
+                {
+                    "value": "1",
+                    "label": "SFS"
+                },
+                {
+                    "value": "2",
+                    "label": "NON-SFS",
+                    "selected": "selected"
+                }
+            ],
+            "required": false
         },
         {
-            "type": "PUT",
-            "id": "update",
-            "name": "update",
-            "label": "",
-            "value": "update",
-            "url": "http://localhost:8080/api/v1/docFile"
+            "type": "select",
+            "name": "primaryHead",
+            "label": "Primary-Head",
+            "cssClass": "",
+            "options": [
+                {
+                    "value": "1",
+                    "label": "SFS"
+                },
+                {
+                    "value": "2",
+                    "label": "NON-SFS",
+                    "selected": "selected"
+                }
+            ],
+            "required": false
+        },
+        {
+            "type": "select",
+            "name": "secondaryHead",
+            "label": "Secondary-Head",
+            "cssClass": "",
+            "options": [
+                {
+                    "value": "1",
+                    "label": "SFS"
+                },
+                {
+                    "value": "2",
+                    "label": "NON-SFS",
+                    "selected": "selected"
+                }
+            ],
+            "required": false
+        },
+        {
+            "type": "select",
+            "name": "tertiaryHead",
+            "label": "Tertiary-Head",
+            "cssClass": "",
+            "options": [
+                {
+                    "value": "1",
+                    "label": "SFS"
+                },
+                {
+                    "value": "2",
+                    "label": "NON-SFS",
+                    "selected": "selected"
+                }
+            ],
+            "required": false
+        },
+        {
+            "type": "text",
+            "name": " year",
+            "label": "year",
+            "cssClass": "form-control",
+            "required": false,
+            "placeHolder": "First Name",
+            "disabled": false,
+            "readOnly": false,
+            "checked": false,
+            "hidden": false,
+            "value": ""
+        },
+        {
+            "type": "text",
+            "name": "fileCode",
+            "label": "file-code",
+            "cssClass": "form-control",
+            "required": false,
+            "placeHolder": "file code",
+            "disabled": false,
+            "readOnly": false,
+            "checked": false,
+            "hidden": false,
+            "value": ""
+        },
+        {
+            "type": "text",
+            "name": "subject",
+            "label": "subject",
+            "cssClass": "form-control",
+            "required": false,
+            "placeHolder": "subject",
+            "disabled": false,
+            "readOnly": false,
+            "checked": false,
+            "hidden": false,
+            "value": ""
+        },
+        {
+            "type": "select",
+            "name": "category",
+            "label": "Category",
+            "cssClass": "",
+            "options": [
+                {
+                    "value": "1",
+                    "label": "SFS"
+                },
+                {
+                    "value": "2",
+                    "label": "NON-SFS",
+                    "selected": "selected"
+                }
+            ],
+            "required": false
+        },
+        {
+            "type": "select",
+            "name": "subCategory",
+            "label": "Sub-Category",
+            "cssClass": "",
+            "options": [
+                {
+                    "value": "1",
+                    "label": "SFS"
+                },
+                {
+                    "value": "2",
+                    "label": "NON-SFS",
+                    "selected": "selected"
+                }
+            ],
+            "required": false
+        },
+        {
+            "type": "textarea",
+            "name": "remark",
+            "label": "Remarks",
+            "cssClass": "form-control",
+            "required": false,
+            "placeHolder": "Remarks",
+            "disabled": false,
+            "readOnly": false,
+            "checked": false,
+            "hidden": false,
+            "value": ""
+        },
+        {
+            "type": "text",
+            "name": "reference",
+            "label": "Reference",
+            "cssClass": "form-control",
+            "required": false,
+            "placeHolder": "Reference",
+            "disabled": false,
+            "readOnly": false,
+            "checked": false,
+            "hidden": false,
+            "value": ""
         }
     ],
     "actions": [
         {
-            "classes": "btn btn-success ms-3",
             "name": "save",
             "type": "submit",
             "label": "Save",
-            "applyto": "form"
+            "cssClass": "btn btn-sm btn-primary mt-3 ms-2",
+            "applyTo": "form",
+            "handler": {
+                "type": "javascript",
+                "func": "submitForm(event)",
+                "method": "post",
+                "url": "http://localhost:8082/api/v1/user"
+            }
         },
         {
-            "name": "addFile",
-            "label": "Add File",
-            "icon": "",
-            "type": "submit",
-            "classes": "btn btn-primary ms-3",
-            "applyto": "table"
-        },
-        {
-            "classes": "btn btn-danger ms-3",
             "name": "cancel",
-            "type": "reset",
+            "type": "button",
             "label": "Cancel",
-            "applyto": "form"
+            "cssClass": "btn btn-sm btn-danger mt-3 ms-2",
+            "applyTo": "form",
+            "handler": {
+                "type": "javascript",
+                "func": "test();"
+            }
         },
         {
-            "name": "edit",
-            "label": "Edit",
-            "icon": "fa fa-pencil",
-            "classes": "btn btn-sm btn-primary ms-2 p-2",
-            "applyto": "row"
-        },
-        {
-            "name": "delete",
-            "label": "Delete",
-            "icon": "fa fa-trash",
-            "classes": "btn btn-primary ms-2 p-2",
-            "applyto": "row"
+            "name": "add",
+            "type": "button",
+            "label": "Add Employee",
+            "cssClass": "btn-danger",
+            "applyTo": "list"
         }
     ],
-    "fields": [
-        {
-            "id": "",
-            "title": "",
-            "noOfColInRow": 2,
-            "fieldGroup": [
-                {
-                    "type": "hidden",
-                    "id": "id",
-                    "name": "id",
-                    "label": "id",
-                    "classes": "",
-                    "placeholder": "Enter your nature",
-                    "suggestion": "",
-                    "listtable": false,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "1",
-                            "label": "Electronic"
-                        },
-                        "label": "test",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "1",
-                                "label": "Electronic"
-                            },
-                            {
-                                "value": "2",
-                                "label": "Physical"
-                            }
-                        ],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": false,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                },
-                {
-                    "type": "select",
-                    "id": "nature",
-                    "name": "nature",
-                    "label": "Nature",
-                    "classes": "",
-                    "placeholder": "Enter your nature",
-                    "suggestion": "",
-                    "listtable": true,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "1",
-                            "label": "Electronic"
-                        },
-                        "label": "test",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "1",
-                                "label": "Electronic"
-                            },
-                            {
-                                "value": "2",
-                                "label": "Physical"
-                            }
-                        ],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": false,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                },
-                {
-                    "type": "select",
-                    "id": "type",
-                    "name": "type",
-                    "label": "type",
-                    "classes": "",
-                    "placeholder": "Enter your type",
-                    "suggestion": "",
-                    "listtable": true,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "1",
-                            "label": "NON-SFS"
-                        },
-                        "label": "test",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "1",
-                                "label": "NON-SFS"
-                            },
-                            {
-                                "value": "2",
-                                "label": "Physical"
-                            }
-                        ],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "radioOptions": [
-                        {
-                            "id": "male",
-                            "label": "Male",
-                            "value": "MALE"
-                        },
-                        {
-                            "id": "female",
-                            "label": "Female",
-                            "value": "FEMALE"
-                        },
-                        {
-                            "id": "other",
-                            "label": "Other",
-                            "value": "OTHER"
-                        }
-                    ],
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                }
-            ]
+    "dataProvider": {
+        "collection": {
+            "url": ""
         },
-        {
-            "id": "",
-            "title": "",
-            "noOfColInRow": 6,
-            "fieldGroup": [
-                {
-                    "type": "select",
-                    "id": "basicHead",
-                    "name": "basicHead",
-                    "label": "Basic Head",
-                    "classes": "",
-                    "placeholder": "",
-                    "suggestion": "",
-                    "listtable": false,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "1",
-                            "label": ""
-                        },
-                        "label": "test",
-                        "url": "http://localhost:8080/api/v1/jetprocess/basichead",
-                        "options": [],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": false,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                },
-                {
-                    "type": "select",
-                    "id": "primaryHead",
-                    "name": "primaryHead",
-                    "label": "Primary Head",
-                    "classes": "",
-                    "placeholder": "",
-                    "suggestion": "",
-                    "listtable": false,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "",
-                            "label": ""
-                        },
-                        "label": "test",
-                        "url": "http://localhost:8080/api/v1/jetprocess/primaryhead/1",
-                        "options": [],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "radioOptions": [
-                        {
-                            "id": "male",
-                            "label": "Male",
-                            "value": "MALE"
-                        },
-                        {
-                            "id": "female",
-                            "label": "Female",
-                            "value": "FEMALE"
-                        },
-                        {
-                            "id": "other",
-                            "label": "Other",
-                            "value": "OTHER"
-                        }
-                    ],
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                },
-                {
-                    "type": "select",
-                    "id": "secondaryHead",
-                    "name": "secondaryHead",
-                    "label": "Secondary Head",
-                    "classes": "",
-                    "placeholder": "",
-                    "suggestion": "",
-                    "listtable": false,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "",
-                            "label": ""
-                        },
-                        "label": "test",
-                        "url": "http://localhost:8080/api/v1/jetprocess/secondaryhead/1",
-                        "options": [
-                            {
-                                "value": "1",
-                                "label": "Electronic"
-                            },
-                            {
-                                "value": "2",
-                                "label": "Physical"
-                            }
-                        ],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": false,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                },
-                {
-                    "type": "select",
-                    "id": "tertiaryhead",
-                    "name": "tertiaryhead",
-                    "label": "Tertiary Head",
-                    "classes": "",
-                    "placeholder": "",
-                    "suggestion": "",
-                    "listtable": false,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "",
-                            "label": ""
-                        },
-                        "label": "",
-                        "url": "http://localhost:8080/api/v1/jetprocess/tertiaryhead/1",
-                        "options": [],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "radioOptions": [
-                        {
-                            "id": "male",
-                            "label": "Male",
-                            "value": "MALE"
-                        },
-                        {
-                            "id": "female",
-                            "label": "Female",
-                            "value": "FEMALE"
-                        },
-                        {
-                            "id": "other",
-                            "label": "Other",
-                            "value": "OTHER"
-                        }
-                    ],
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                },
-                {
-                    "type": "number",
-                    "id": "fileCode",
-                    "name": "fileCode",
-                    "label": "File Code",
-                    "classes": "form-control",
-                    "placeholder": "",
-                    "suggestion": "",
-                    "listtable": false,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "",
-                            "label": ""
-                        },
-                        "label": "",
-                        "url": "",
-                        "options": [],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "radioOptions": [
-                        {
-                            "id": "male",
-                            "label": "Male",
-                            "value": "MALE"
-                        },
-                        {
-                            "id": "female",
-                            "label": "Female",
-                            "value": "FEMALE"
-                        },
-                        {
-                            "id": "other",
-                            "label": "Other",
-                            "value": "OTHER"
-                        }
-                    ],
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                },
-                {
-                    "type": "text",
-                    "id": "year",
-                    "name": "year",
-                    "label": "Year",
-                    "classes": "form-control",
-                    "placeholder": "",
-                    "suggestion": "",
-                    "listtable": false,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "",
-                            "label": ""
-                        },
-                        "label": "",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "",
-                                "label": ""
-                            }
-                        ],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "radioOptions": [
-                        {
-                            "id": "male",
-                            "label": "Male",
-                            "value": "MALE"
-                        },
-                        {
-                            "id": "female",
-                            "label": "Female",
-                            "value": "FEMALE"
-                        },
-                        {
-                            "id": "other",
-                            "label": "Other",
-                            "value": "OTHER"
-                        }
-                    ],
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                }
-            ]
-        },
-        {
-            "id": "",
-            "title": "",
-            "noOfColInRow": 1,
-            "fieldGroup": [
-                {
-                    "type": "text",
-                    "id": "subject",
-                    "name": "subject",
-                    "label": "subject",
-                    "classes": "form-control",
-                    "placeholder": "",
-                    "suggestion": "",
-                    "listtable": true,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "",
-                            "label": ""
-                        },
-                        "label": "",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "",
-                                "label": ""
-                            }
-                        ],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "radioOptions": [
-                        {
-                            "id": "male",
-                            "label": "Male",
-                            "value": "MALE"
-                        },
-                        {
-                            "id": "female",
-                            "label": "Female",
-                            "value": "FEMALE"
-                        },
-                        {
-                            "id": "other",
-                            "label": "Other",
-                            "value": "OTHER"
-                        }
-                    ],
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                },
-                {
-                    "type": "select",
-                    "id": "category",
-                    "name": "category",
-                    "label": "Category",
-                    "classes": "",
-                    "placeholder": "",
-                    "suggestion": "",
-                    "listtable": false,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "1",
-                            "label": "NON-SFS"
-                        },
-                        "label": "test",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "1",
-                                "label": "NON-SFS"
-                            },
-                            {
-                                "value": "2",
-                                "label": "Physical"
-                            }
-                        ],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "radioOptions": [
-                        {
-                            "id": "male",
-                            "label": "Male",
-                            "value": "MALE"
-                        },
-                        {
-                            "id": "female",
-                            "label": "Female",
-                            "value": "FEMALE"
-                        },
-                        {
-                            "id": "other",
-                            "label": "Other",
-                            "value": "OTHER"
-                        }
-                    ],
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                },
-                {
-                    "type": "select",
-                    "id": "subcategory",
-                    "name": "subcategory",
-                    "label": "Sub-Category",
-                    "classes": "",
-                    "placeholder": "",
-                    "suggestion": "",
-                    "listtable": false,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "1",
-                            "label": "NON-SFS"
-                        },
-                        "label": "test",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "1",
-                                "label": "NON-SFS"
-                            },
-                            {
-                                "value": "2",
-                                "label": "Physical"
-                            }
-                        ],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "radioOptions": [
-                        {
-                            "id": "male",
-                            "label": "Male",
-                            "value": "MALE"
-                        },
-                        {
-                            "id": "female",
-                            "label": "Female",
-                            "value": "FEMALE"
-                        },
-                        {
-                            "id": "other",
-                            "label": "Other",
-                            "value": "OTHER"
-                        }
-                    ],
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                },
-                {
-                    "type": "textarea",
-                    "id": "remark",
-                    "name": "remark",
-                    "label": "Remark",
-                    "classes": "form-control",
-                    "placeholder": "",
-                    "suggestion": "",
-                    "listtable": true,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "1",
-                            "label": "NON-SFS"
-                        },
-                        "label": "test",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "1",
-                                "label": "NON-SFS"
-                            },
-                            {
-                                "value": "2",
-                                "label": "Physical"
-                            }
-                        ],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "radioOptions": [
-                        {
-                            "id": "male",
-                            "label": "Male",
-                            "value": "MALE"
-                        },
-                        {
-                            "id": "female",
-                            "label": "Female",
-                            "value": "FEMALE"
-                        },
-                        {
-                            "id": "other",
-                            "label": "Other",
-                            "value": "OTHER"
-                        }
-                    ],
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                },
-                {
-                    "type": "text",
-                    "id": "reference",
-                    "name": "reference",
-                    "label": "Reference",
-                    "classes": "form-control",
-                    "placeholder": "",
-                    "suggestion": "",
-                    "listtable": true,
-                    "config": {
-                        "disabled": false,
-                        "readOnly": false,
-                        "checked": false,
-                        "hidden": false
-                    },
-                    "provider": {
-                        "selectedValue": {
-                            "value": "",
-                            "label": ""
-                        },
-                        "label": "test",
-                        "url": "",
-                        "options": [
-                            {
-                                "value": "",
-                                "label": ""
-                            },
-                            {
-                                "value": "",
-                                "label": ""
-                            }
-                        ],
-                        "value": "",
-                        "hidden": false
-                    },
-                    "radioOptions": [
-                        {
-                            "id": "male",
-                            "label": "Male",
-                            "value": "MALE"
-                        },
-                        {
-                            "id": "female",
-                            "label": "Female",
-                            "value": "FEMALE"
-                        },
-                        {
-                            "id": "other",
-                            "label": "Other",
-                            "value": "OTHER"
-                        }
-                    ],
-                    "value": "",
-                    "htmlElement": "text",
-                    "valid": false,
-                    "validation": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    },
-                    "errorMessage": {
-                        "required": true,
-                        "maxLength": "",
-                        "minLength": ""
-                    }
-                }
-            ]
+        "selector": {
+            "url": ""
         }
-    ]
+    }
 }

@@ -14,13 +14,11 @@ const Radio = (props) => {
         }
         if (props.fieldConfig.provider !== undefined) {
             setOptions(getProviderData(props.fieldConfig.provider.url));
-            console.log("provider is not undefined..", getProviderData(props.fieldConfig.provider.url))
         }
 
     }, [])
 
     const getProviderData = (url) => {
-        console.log("url : ", url)
         let providerData = [];
         axios.get(url).then((res) => {
             providerData.push(res.data);
@@ -34,7 +32,6 @@ const Radio = (props) => {
             <label>{props.fieldConfig.label}</label>
             <br />
             {options.map((option, key) => <>
-                {console.log(option)}
                 <input type={props.fieldConfig.type}
                     className={props.fieldConfig.cssClass}
                     name={props.fieldConfig.name}

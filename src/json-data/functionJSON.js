@@ -1,6 +1,6 @@
-{
-    "id": "employeeForm",
-    "title": "New Employee",
+ const json = {
+    "id": "fileForm",
+    "title": "Create Employee",
     "subtitle": "New Employee Registration",
     "namespace": "",
     "enctype": "multipart/form-data",
@@ -8,61 +8,64 @@
         {
             "type": "group",
             "name": "nameGroup",
-            "label": "name",
-            "cols": 3,
+            "label": "file type",
+            "cols": 2,
             "fields": [
                 {
-                    "type": "text",
-                    "name": " firstName",
-                    "label": "First Name",
-                    "cssClass": "form-control",
-                    "required": false,
-                    "placeHolder": "First Name",
-                    "disabled": false,
-                    "readOnly": false,
-                    "checked": false,
-                    "hidden": false,
-                    "value": ""
+                    "type": "select",
+                    "name": "nature",
+                    "label": "Nature",
+                    "cssClass": "",
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": "Physical"
+                        },
+                        {
+                            "value": "2",
+                            "label": "Electronic",
+                            "selected": "selected"
+                        }
+                    ],
+                    "required": false
                 },
                 {
-                    "type": "text",
-                    "name": "middleName",
-                    "cssClass": "form-control",
-                    "label": "Middle Name",
-                    "placeHolder": "Middle Name",
-                    "disabled": false,
-                    "readOnly": false,
-                    "checked": false,
-                    "hidden": false,
-                    "value": ""
-                },
-                {
-                    "type": "text",
-                    "name": "  lastName",
-                    "label": "Last Name",
-                    "cssClass": "form-control",
-                    "required": false,
-                    "placeHolder": "Last Name",
-                    "disabled": false,
-                    "readOnly": false,
-                    "checked": false,
-                    "hidden": false,
-                    "value": ""
+                    "type": "select",
+                    "name": "type",
+                    "label": "Type",
+                    "cssClass": "",
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": "SFS"
+                        },
+                        {
+                            "value": "2",
+                            "label": "NON-SFS",
+                            "selected": "selected"
+                        }
+                    ],
+                    "required": false
                 }
             ]
         },
         {
-            "type": "text",
-            "name": "username",
-            "label": "Screen Name",
-            "cssClass": "form-control",
-            "listable": false,
-            "searchable": false,
-            "disabled": false,
-            "readOnly": false,
-            "checked": false,
-            "hidden": false,
-            "value": ""
+            "type": "select",
+            "name": "basicHead",
+            "label": "Basic-Head",
+            "cssClass": "",
+            "options": [
+                {
+                    "value": "1",
+                    "label": "SFS"
+                },
+                {
+                    "value": "2",
+                    "label": "NON-SFS",
+                    "selected": "selected"
+                }
+            ],
+            "required": false
         },
         {
             "type": "email",
@@ -73,8 +76,7 @@
             "disabled": false,
             "readOnly": false,
             "checked": false,
-            "hidden": false,
-            "value": ""
+            "hidden": false
         },
         {
             "type": "password",
@@ -88,8 +90,7 @@
             "disabled": false,
             "readOnly": false,
             "checked": false,
-            "hidden": false,
-            "value": ""
+            "hidden": false
         },
         {
             "type": "date",
@@ -100,8 +101,7 @@
             "disabled": false,
             "readOnly": false,
             "checked": false,
-            "hidden": false,
-            "value": ""
+            "hidden": false
         },
         {
             "type": "date",
@@ -114,8 +114,7 @@
             "disabled": false,
             "readOnly": false,
             "checked": false,
-            "hidden": false,
-            "value": ""
+            "hidden": false
         },
         {
             "type": "number",
@@ -126,8 +125,7 @@
             "disabled": false,
             "readOnly": false,
             "checked": false,
-            "hidden": false,
-            "value": ""
+            "hidden": false
         },
         {
             "type": "list",
@@ -149,8 +147,7 @@
                     "readOnly": false,
                     "checked": false,
                     "hidden": false,
-                    "showLabel": false,
-                    "value": ""
+                    "showLabel": false
                 },
                 {
                     "type": "text",
@@ -162,8 +159,7 @@
                     "readOnly": false,
                     "checked": false,
                     "hidden": false,
-                    "showLabel": false,
-                    "value": ""
+                    "showLabel": false
                 },
                 {
                     "type": "text",
@@ -176,8 +172,7 @@
                     "readOnly": false,
                     "checked": false,
                     "hidden": false,
-                    "showLabel": false,
-                    "value": ""
+                    "showLabel": false
                 },
                 {
                     "type": "text",
@@ -190,8 +185,7 @@
                     "readOnly": false,
                     "checked": false,
                     "hidden": false,
-                    "showLabel": false,
-                    "value": ""
+                    "showLabel": false
                 }
             ],
             "actions": [
@@ -239,8 +233,7 @@
                     "value": "no",
                     "label": "No"
                 }
-            ],
-            "value": ""
+            ]
         },
         {
             "type": "radio",
@@ -250,8 +243,7 @@
             "required": false,
             "provider": {
                 "url": "https://mocki.io/v1/6e76eae7-a3b1-44cb-8e75-4526106568b7"
-            },
-            "value": ""
+            }
         },
         {
             "type": "select",
@@ -273,8 +265,7 @@
                     "label": "Divorced"
                 }
             ],
-            "required": false,
-            "value": ""
+            "required": false
         },
         {
             "type": "select",
@@ -316,7 +307,7 @@
                 }
             ],
             "required": false,
-            "value": ""
+            "value": "ap"
         },
         {
             "type": "select",
@@ -328,8 +319,7 @@
                 "url": "http://localhost:8082/api/v1/country",
                 "value": "id",
                 "label": "name"
-            },
-            "value": ""
+            }
         },
         {
             "type": "select",
@@ -351,8 +341,7 @@
                         "value": "0"
                     }
                 ]
-            },
-            "value": ""
+            }
         },
         {
             "type": "select",
@@ -374,8 +363,7 @@
                         "value": "0"
                     }
                 ]
-            },
-            "value": ""
+            }
         },
         {
             "type": "checkbox",
@@ -387,8 +375,7 @@
                 "url": "https://mocki.io/v1/6e76eae7-a3b1-44cb-8e75-4526106568b7",
                 "value": "id",
                 "label": "name"
-            },
-            "value": ""
+            }
         },
         {
             "type": "file",
@@ -401,13 +388,13 @@
     "actions": [
         {
             "name": "save",
-            "type": "submit",
+            "type": "button",
             "label": "Save",
             "cssClass": "btn btn-sm btn-primary mt-3 ms-2",
             "applyTo": "form",
             "handler": {
                 "type": "javascript",
-                "func": "submitForm(event)",
+                "func": (event)=>test(event),
                 "method": "post",
                 "url": "http://localhost:8082/api/v1/user"
             }
@@ -419,8 +406,8 @@
             "cssClass": "btn btn-sm btn-danger mt-3 ms-2",
             "applyTo": "form",
             "handler": {
-                "type": "javascript",
-                "func": "test(e);"
+                "type": "javascript", 
+                "func": ()=>test()
             }
         },
         {
@@ -440,3 +427,5 @@
         }
     }
 }
+
+export default json;

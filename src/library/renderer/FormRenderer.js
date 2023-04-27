@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Renderer from './FieldRenderer';
 import toast from 'react-hot-toast';
 import axios from "axios";
+
 const Form = (props) => {
+    const test = () => {
+        alert("aa");
+    }
     let url = "";
     const { formObject } = props;
     const [fieldArray, setFieldArray] = useState(formObject.fields);
@@ -10,14 +14,26 @@ const Form = (props) => {
     const [methodType, setMethodType] = useState()
     const [requestType, setRequestType] = useState("post");
     // const [fieldData, setFieldData] = useState(props.editData);
-    const submit = (e) => {
+    const submitForm = (e) => {
         e.preventDefault();
         var form = new FormData();
         fieldArray.map((item, index) => {
-            if (item.value != "") {
-                form.append(item.name, item.value);
+            if (item.type === "group") {
+                item.fields.map((field) => {
+                })
+                if (item.value != "") {
+                    form.append(item.name, item.value);
+                }
+            } else {
+                if (item.value != "") {
+                    form.append(item.name, item.value);
+                }
             }
+
         })
+        console.log(form.get("username"))
+        console.log(form.get("firstName"))
+        console.log(form.get("middleName"))
         if (props.requestType === "POST") {
             axios.post(props.url, form, {
                 headers: {
@@ -70,9 +86,20 @@ const Form = (props) => {
     return (
         <div className='container Form'>
             <h3 className='text-center'>{props.formObject.title}</h3>
-            <form onSubmit={(event) => { submit(event) }}>
+            <form onSubmit={(event) => { submitForm(event) }}>
                 <Renderer fieldArray={fieldArray} fieldData={props.editData} setFieldArray={setFieldArray} />
-                
+                <div className='text-center'>
+                    {
+                        props.formObject.actions.map((item, key) =>
+                            <>
+                                {console.log(item.handler?.func)}
+                                {
+                                    item.applyTo === "form" ? (<><button type={item.type} className={item.cssClass} onClick={item.handler?.func} >{item.label}</button></>) : (<></>)
+                                }
+                            </>
+                        )
+                    }
+                </div>
             </form>
         </div>
     );
