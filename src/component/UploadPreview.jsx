@@ -57,7 +57,7 @@ export const UploadPreview = () => {
         <div onDrop={onDrag} className="border" style={{ width: "50%", height: "30%", margin: "0% 25%" }} >
 
           {
-            flag ? <div className="text-center" style={{ position: "absolute", padding:"11%" }}>< button type="button" className="btn btn-primary btn-sm" value={a} onClick={(e) => { onBtnClick(e) }}>upload</button> <p>Please select pdf file to upload</p></div> : <button type="button" onClick={() => { resetUpload() }}>clear</button>
+            flag ? <div className="text-center" style={{}}>< button type="button" className="btn btn-primary btn-sm" value={a} onClick={(e) => { onBtnClick(e) }}>upload</button> <p>Please select pdf file to upload</p></div> : <div style={{ float: 'right', padding:'0px', margin:"0px" }}><button type="button" className="btn btn-warming" style={{ float: "float-right" }} onClick={() => { resetUpload() }}><span style={{ float: 'right', fontSize: '25px', marginTop: '-4%', marginRight: '-3%' }}>&times;</span> </button></div>
 
           }
           <input accept="application/pdf" type="file" style={{ display: "none", }} ref={inputFileRef} onChange={(e) => { uploadFile(e) }} />

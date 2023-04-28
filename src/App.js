@@ -10,6 +10,7 @@ import { EmailService } from "./theme/Service/EmailService";
 import topbarJSON from "./json-data/theme-json/TopbarConfig"
 
 import toast, { Toaster } from 'react-hot-toast';
+import Handle from './component/Handle';
 
 export const settings = {
   /* [..] Other settings */
@@ -40,6 +41,8 @@ function App() {
     <>
       <Toaster position="left" reverseOrder={false} />
       <ThemeRender sideBarJSON={sideNavJSON} topbarJSON={topbarJSON}></ThemeRender>;
+
+    
     </>
 
   );

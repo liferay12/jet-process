@@ -394,7 +394,7 @@
             "applyTo": "form",
             "handler": {
                 "type": "javascript",
-                "func": (event)=>test(event),
+                "func": "ashwani",
                 "method": "post",
                 "url": "http://localhost:8082/api/v1/user"
             }
@@ -407,7 +407,7 @@
             "applyTo": "form",
             "handler": {
                 "type": "javascript", 
-                "func": ()=>test()
+                "func":"test"
             }
         },
         {

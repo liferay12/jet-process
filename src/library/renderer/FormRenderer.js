@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Renderer from './FieldRenderer';
 import toast from 'react-hot-toast';
 import axios from "axios";
-
+import MyFunction from '../../component/allFunc';
 const Form = (props) => {
-    const test = () => {
-        alert("aa");
-    }
+    const func=MyFunction;
     let url = "";
     const { formObject } = props;
     const [fieldArray, setFieldArray] = useState(formObject.fields);
@@ -94,7 +92,7 @@ const Form = (props) => {
                             <>
                                 {console.log(item.handler?.func)}
                                 {
-                                    item.applyTo === "form" ? (<><button type={item.type} className={item.cssClass} onClick={item.handler?.func} >{item.label}</button></>) : (<></>)
+                                    item.applyTo === "form" ? (<><button type={item.type} className={item.cssClass} onClick={ eval("func."+item.handler.func) } >{item.label}</button></>) : (<></>)
                                 }
                             </>
                         )

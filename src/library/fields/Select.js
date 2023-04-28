@@ -17,8 +17,13 @@ const Select = (props) => {
         }
         if (props.fieldConfig.provider !== undefined) {
 
-            getProviderData(props.fieldConfig.provider.url);
-            setVal([])
+            // console.table("*** : ", getProviderData(props.fieldConfig.provider.url))
+            let proData = [];
+            getProviderData(props.fieldConfig.provider.url).map((data, index) => {
+                // console.log(data.id, " : ", data.label)
+                proData.push({ value: data.id, label: data.label })
+            })
+            setVal()
         }
 
         //     if (props.fieldConfig.provider.url !== "") {
@@ -34,10 +39,12 @@ const Select = (props) => {
     const getProviderData = (url) => {
         let providerData = [];
         axios.get(url).then((res) => {
+            console.log(res.data)
             providerData.push(res.data);
         }).catch((err) => {
             console.error("Enable to fetch provider data : ", err);
         })
+
         return providerData;
     }
 

@@ -7,9 +7,12 @@ import { File } from './File';
 import axios from 'axios'
 import Form from '../library/renderer/FormRenderer';
 import DataTableColumn from './file/helper/DataTableColumn';
-import json from "../json-data/fileForm.json"
+import json from "../json-data/functionJSON"
 
 export const Test = () => {
+
+
+   
 
     let putURL = "";
     const [docFile, setDocFile] = useState({});
@@ -90,3 +93,4 @@ export const Test = () => {
         </>
     );
 }
+

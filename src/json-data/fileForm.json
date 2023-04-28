@@ -54,17 +54,11 @@
             "name": "basicHead",
             "label": "Basic-Head",
             "cssClass": "",
-            "options": [
-                {
-                    "value": "1",
-                    "label": "SFS"
-                },
-                {
-                    "value": "2",
-                    "label": "NON-SFS",
-                    "selected": "selected"
-                }
-            ],
+            "provider": {
+                "url": "http://localhost:8080/api/v1/jetprocess/basichead",
+                "value": "id",
+                "label": "name"
+            },
             "required": false
         },
         {
@@ -72,17 +66,11 @@
             "name": "primaryHead",
             "label": "Primary-Head",
             "cssClass": "",
-            "options": [
-                {
-                    "value": "1",
-                    "label": "SFS"
-                },
-                {
-                    "value": "2",
-                    "label": "NON-SFS",
-                    "selected": "selected"
-                }
-            ],
+            "provider": {
+                "url": "http://localhost:8080/api/v1/jetprocess/basichead",
+                "value": "id",
+                "label": "name"
+            },
             "required": false
         },
         {
@@ -90,17 +78,11 @@
             "name": "secondaryHead",
             "label": "Secondary-Head",
             "cssClass": "",
-            "options": [
-                {
-                    "value": "1",
-                    "label": "SFS"
-                },
-                {
-                    "value": "2",
-                    "label": "NON-SFS",
-                    "selected": "selected"
-                }
-            ],
+            "provider": {
+                "url": "http://localhost:8080/api/v1/jetprocess/basichead",
+                "value": "id",
+                "label": "name"
+            },
             "required": false
         },
         {
@@ -108,17 +90,11 @@
             "name": "tertiaryHead",
             "label": "Tertiary-Head",
             "cssClass": "",
-            "options": [
-                {
-                    "value": "1",
-                    "label": "SFS"
-                },
-                {
-                    "value": "2",
-                    "label": "NON-SFS",
-                    "selected": "selected"
-                }
-            ],
+            "provider": {
+                "url": "http://localhost:8080/api/v1/jetprocess/basichead",
+                "value": "id",
+                "label": "name"
+            },
             "required": false
         },
         {
@@ -165,17 +141,11 @@
             "name": "category",
             "label": "Category",
             "cssClass": "",
-            "options": [
-                {
-                    "value": "1",
-                    "label": "SFS"
-                },
-                {
-                    "value": "2",
-                    "label": "NON-SFS",
-                    "selected": "selected"
-                }
-            ],
+            "provider": {
+                "url": "http://localhost:8080/api/v1/jetprocess/basichead",
+                "value": "id",
+                "label": "name"
+            },
             "required": false
         },
         {
@@ -183,17 +153,11 @@
             "name": "subCategory",
             "label": "Sub-Category",
             "cssClass": "",
-            "options": [
-                {
-                    "value": "1",
-                    "label": "SFS"
-                },
-                {
-                    "value": "2",
-                    "label": "NON-SFS",
-                    "selected": "selected"
-                }
-            ],
+            "provider": {
+                "url": "http://localhost:8080/api/v1/jetprocess/basichead",
+                "value": "id",
+                "label": "name"
+            },
             "required": false
         },
         {
